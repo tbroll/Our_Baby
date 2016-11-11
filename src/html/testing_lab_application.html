@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <title>
+        Software Testing Lab Application Form
+    </title>
+    <script type = "text/javascript" src = "../resources/js/generate.js"></script>
+</head>
+<body>
+    <header>
+    <h1>
+        Software Testing Lab Application Form
+    </h1>
+    </header>
+    <main>
+    <form action = "confirmation.php" method = "post">
+        <!--ask Dr. C about the importance of "country of citizenship -->
+        <!-- each comment will be a line on the webpage-->
+        <!-- First name and last name-->
+        <fieldset>
+            <legend>
+                Personal Information
+            </legend>
+        <label> First Name: 
+            <input type = "text" id = "firstName">
+        </label>
+        <label> Last Name: 
+            <input type = "text" id = "lastName">
+        </label>
+        <br>
+        <br>
+        <label> Address: 
+            <input type = "text" id = "address">
+        </label>
+        <label> Phone Number: 
+            <input type = "text" id = "phoneNumber">
+        </label>
+        <!-- city, state, zip code, and date of birth-->
+        <br>
+        <br>
+        <label> City: 
+            <input type = "text" id = "city">
+        </label>
+        <label> State: 
+            <input type = "text" id = "state">
+        </label>
+        <label> Zip Code: 
+            <input type = "text" id = "zipCode">
+        </label>
+        <label> Date Of Birth:
+            <input type = "text" id = "dateOfBirth">
+        </label>
+        <!-- Country of citizenship and email-->
+        <br>
+        <br>
+        <label> Country of Citizenship: 
+            <input type = "text" id = "citizenShip">
+        </label>
+        <label> Email: 
+            <input type = "email" id = "email">
+        </label>
+        <!--Majors, Minors, and expected graduation date -->
+        <br>
+        <br>
+        <label> Majors: 
+        <input type = "text" id = "majors">
+        </label>
+        <label> Minors: 
+        <input type = "text" id = "minors">
+        </label>
+        <label> Graduation Date: 
+        <input type = "text" id = "graduationDate">
+        </label>
+    </fieldset>
+        <br>
+        <br>
+        <!-- Work availability-->
+        <fieldset>
+            <legend>
+                Work Availability
+            </legend>
+        <label> 
+            <input type = "checkbox" id = "canYouWorkSummers">
+            Can you work summers? 
+        </label>
+        <br>
+        <br>
+        <label> 
+            <input type = "checkbox" id = "canYouWorkDuringYear">
+            Can you work 15 to 20 hours per week during the school year?
+        </label>
+        <!--previous or current other campus jobs -->
+        <br>
+        <br>
+        <label> 
+            <input type = "checkbox" id = "workOnCampusCurrently">
+            Do you work on campus?
+        </label>
+        <br>
+        <br>
+        <label> 
+            <input type = "checkbox" id = "workOnCampusPast">
+            Have you worked on campus?
+        </label>
+        <br>
+        <br>
+        <label> 
+            Where and when?
+            <input type = "text" disabled = "disabled" id = "wwOnCampus">
+        </label>
+        <!-- Planning to do practicum, if so when and how long?-->
+        <br>
+        <br>
+        <label> 
+            <input type = "checkbox" id = "Practicum">
+            Are you planning to do Practicum?
+        </label>
+        <br>
+        <br>
+        <label> 
+            if so, when and how long
+            <input type = "text"  id = "PracHowLong">
+        </label>
+        <!-- any other activities you participate in? if so, how much-->
+        <br>
+        <br>
+        <label> 
+            How many activites do you participate in?
+            <select id = "numberOfActivities">
+                <option> 1 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+                <option> 4 </option>
+                <option> 5 </option>
+                <option> 6 </option>
+                <option> 7 </option>
+                <option> 8 </option>
+                <option> 9 </option>
+                <option> 10</option>
+                <option> 11</option>
+                <option> 12</option>
+                <option> 13</option>
+                <option> 14</option>
+                <option> 15</option>
+                <option> 16</option>
+            </select>
+        </label>
+        <button> Generate Forms </button>
+        <div id = "activities">
+            <h3>
+                Are you involved in any other activities (sports,jobs, etc.)? 
+                If so, please list and give the amount of time you spend on
+                each.
+            </h3>
+        </div>
+        </fieldset>
+        <!-- CS and Math classes currently taken-->
+        <br>
+        <br>
+        <fieldset>
+            <legend>
+                Classes Taken:
+            </legend>
+        <label> 
+            How many Math and Computer Science classes have you taken?
+            <select id = "numberOfClasses">
+                <option> 1 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+                <option> 4 </option>
+                <option> 5 </option>
+                <option> 6 </option>
+                <option> 7 </option>
+                <option> 8 </option>
+                <option> 9 </option>
+                <option> 10</option>
+                <option> 11</option>
+                <option> 12</option>
+                <option> 13</option>
+                <option> 14</option>
+                <option> 15</option>
+                <option> 16</option>
+            </select>
+        </label>
+        <button> Generate Forms </button>
+            </fieldset>
+            <div id = "classesTaken">
+            </div>
+        <!-- list any the other CS skills and rate those skills -->
+        <div id = "additionalSkills">
+            <h3>
+                the number of classes has been selected-->
+                List other CS or special skills that you may have?
+                Example: Java
+                Where did you did you get these skills?
+                Rate your skills on a scale from 1 to 5.
+            </h3>
+            <input type = "text" value = "additional skills">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br>
+            <input type = "text" value = "additional skills">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br>
+            <input type = "text" value = "additional skills">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br>
+            <input type = "text" value = "additional skills">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br>
+            <input type = "text" value = "additional skills">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br>
+            <input type = "text" value = "additional skills">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br>
+            </div>
+        <!-- Do you know anyone who currently works in the lab? if so, who? -->
+        <br>
+        <br>
+        <label> 
+            Do you know of anyone who currently works in the testing lab?
+            If so, who?
+            <input type = "text" id = "numberOfActivites">
+        </label>
+        <br>
+        <br>
+        <!-- attach a copy of transcript, 
+        current class schedule, and photo of ID card -->
+        <br>
+        <input type = "submit" value = "Submit Application">
+    </form>
+    </main>
+    <footer>
+    </footer>
+</body>
+<html>
+
