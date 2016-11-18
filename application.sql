@@ -65,7 +65,7 @@ DROP TABLE IF EXISTS `Minor`;
 CREATE TABLE `Minor` (
   `minor` varchar(60) NOT NULL DEFAULT '0',
   `S_ID` varchar(10) DEFAULT NULL,
-  PRIMARY KEY (`S_ID, `minor`)
+  PRIMARY KEY (`S_ID`, `minor`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
