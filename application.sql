@@ -1,3 +1,4 @@
+@@ -1,184 +0,0 @@
 --
 -- Host: localhost    Database: application
 -- ------------------------------------------------------
@@ -152,6 +153,7 @@ CREATE TABLE `EverOnCamp` (
   PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 
 
 --
