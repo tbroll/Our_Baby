@@ -6,6 +6,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"type="text/javascript"></script>
 		<script type="text/javascript" src="getApplicant.js" ></script>
 		<?php
+			include("common.php");
 			$query = do_query("SELECT * FROM student");
 		?>
 	</head>
@@ -15,7 +16,7 @@
 			<h1>Applicants: <h1>
 		</header>
 		<main>
-			<div id=table>
+			<div id="table">
 			<table>
 				<?php foreach ($query as $row){?>
 				<tr>
