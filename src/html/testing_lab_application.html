@@ -4,8 +4,10 @@
     <title>
         Software Testing Lab Application Form
     </title>
-    <script type = "text/javascript" src = "../resources/js/generate.js"></script>
-    <script type = "text/javascript" src = "../resources/js/generate.js"></script>
+    <script type = "text/javascript" src = "../resources/js/jquery-3.1.1.min.js">
+    </script>
+    <script type = "text/javascript" src = "../resources/js/generate.js">
+    </script>
 </head>
 <body>
     <header>
@@ -49,7 +51,22 @@
             <input type = "text" id = "zipCode">
         </label>
         <label> Date Of Birth:
-            <input type = "text" id = "dateOfBirth">
+            <select name = "month">
+                <option value = "1"> January</option>
+                <option value = "2">Febuary</option>
+                <option value = "3">March</option>
+                <option value = "4">April</option>
+                <option value = "5">May</option>
+                <option value = "6">June</option>
+                <option value = "7">July</option>
+                <option value = "8">August</option>
+                <option value = "9">September</option>
+                <option value = "10">October</option>
+                <option value = "11">November</option>
+                <option value = "12">December</option>
+            </select>
+            <input type = "number" min = 0 max = 31 placeholder = "day">
+            <input type = "number" placeholder = "year" min = 1985>
         </label>
         <!-- Country of citizenship and email-->
         <br>
@@ -70,7 +87,8 @@
         <input type = "text" id = "minors">
         </label>
         <label> Graduation Date: 
-        <input type = "text" id = "graduationDate">
+        <select name = "graduationDate" id = "graduationDate">
+        </select> 
         </label>
     </fieldset>
         <br>
@@ -128,6 +146,7 @@
         <label> 
             How many activites do you participate in?
             <select id = "numberOfActivities">
+                <option selected > 0 </option>
                 <option> 1 </option>
                 <option> 2 </option>
                 <option> 3 </option>
@@ -146,13 +165,7 @@
                 <option> 16</option>
             </select>
         </label>
-        <button> Generate Forms </button>
-        <div id = "activities">
-            <h3>
-                Are you involved in any other activities (sports,jobs, etc.)? 
-                If so, please list and give the amount of time you spend on
-                each.
-            </h3>
+        <div id = "activity">
         </div>
         </fieldset>
         <!-- CS and Math classes currently taken-->
@@ -165,6 +178,7 @@
         <label> 
             How many Math and Computer Science classes have you taken?
             <select id = "numberOfClasses">
+                <option selected> 0 </option>
                 <option> 1 </option>
                 <option> 2 </option>
                 <option> 3 </option>
@@ -183,20 +197,18 @@
                 <option> 16</option>
             </select>
         </label>
-        <button> Generate Forms </button>
             </fieldset>
             <div id = "classesTaken">
             </div>
         <!-- list any the other CS skills and rate those skills -->
         <div id = "additionalSkills">
             <h3>
-                the number of classes has been selected-->
                 List other CS or special skills that you may have?
                 Example: Java
                 Where did you did you get these skills?
                 Rate your skills on a scale from 1 to 5.
             </h3>
-            <input type = "text" value = "additional skills">
+            <input type = "text"  placeholder = "additional skills">
             <select>
                 <option>1</option>
                 <option>2</option>
@@ -205,7 +217,7 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text" value = "additional skills">
+            <input type = "text"  placeholder = "additional skills">
             <select>
                 <option>1</option>
                 <option>2</option>
@@ -214,7 +226,7 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text" value = "additional skills">
+            <input type = "text"  placeholder = "additional skills">
             <select>
                 <option>1</option>
                 <option>2</option>
@@ -223,7 +235,7 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text" value = "additional skills">
+            <input type = "text"  placeholder = "additional skills">
             <select>
                 <option>1</option>
                 <option>2</option>
@@ -232,7 +244,7 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text" value = "additional skills">
+            <input type = "text"  placeholder = "additional skills">
             <select>
                 <option>1</option>
                 <option>2</option>
@@ -241,7 +253,7 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text" value = "additional skills">
+            <input type = "text"  placeholder = "additional skills">
             <select>
                 <option>1</option>
                 <option>2</option>
