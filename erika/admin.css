@@ -1,0 +1,10 @@
+div .studapp{
+	border:1px solid black;
+	padding:5px;
+}
+
+table, th, td, caption{
+	border:1px solid black;
+	border-collapse:collapse;
+	padding:3px;
+}
