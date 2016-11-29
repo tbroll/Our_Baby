@@ -1,0 +1,82 @@
+
+a:link {
+    text-decoration: none;
+}
+
+
+body {
+  margin: 0 auto;
+  font-family: Verdana, sans-serif;
+  position: relative;
+  height: 100%;
+  color: #13152E;
+   background: #413293;
+}
+
+header {
+  width: 100%;
+  background: #413293;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: linear-gradient(
+      rgba(255,255,255, 0.35),
+      rgba(66,51,147, 0.85)
+    ), url(images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 90vh;
+  padding-top: 120px;
+}
+
+
+
+main {
+  width: 100%;
+  background: #413293;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 11pt;
+}
+
+  /* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+footer {
+  width: 100%;
+  background: #EDECEC;
+  text-align: center;
+  color: #231F20;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 8pt;
+}
+
+nav {
+  width: 100%;
+  background: #413293;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+nav  a{
+  margin-left: 25px;
+}
+
+img {
+  overflow: hidden;
+}
+
