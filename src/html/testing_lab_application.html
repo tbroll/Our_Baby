@@ -25,34 +25,34 @@
                 Personal Information
             </legend>
         <label> First Name: 
-            <input type = "text" id = "firstName">
+            <input type = "text" name = "firstName"  id = "firstName">
         </label>
         <label> Last Name: 
-            <input type = "text" id = "lastName">
+            <input type = "text" name = "lastName" id = "lastName">
         </label>
         <br>
         <br>
         <label> Address: 
-            <input type = "text" id = "address">
+            <input type = "text" name = "address" id = "address">
         </label>
         <label> Phone Number: 
-            <input type = "text" id = "phoneNumber">
+            <input type = "number" min = 0 max = 19999999999 name = "phoneNumber" id = "phoneNumber">
         </label>
         <!-- city, state, zip code, and date of birth-->
         <br>
         <br>
         <label> City: 
-            <input type = "text" id = "city">
+            <input type = "text" name = "city" id = "city">
         </label>
         <label> State: 
-            <input type = "text" id = "state">
+            <input type = "text" name = "state" id = "state">
         </label>
         <label> Zip Code: 
-            <input type = "text" id = "zipCode">
+            <input type = "text" name = "zipCode" id = "zipCode">
         </label>
         <label> Date Of Birth:
-            <select name = "month">
-                <option value = "1"> January</option>
+            <select  id = "month" name = "month">
+                <option value = "1">January</option>
                 <option value = "2">Febuary</option>
                 <option value = "3">March</option>
                 <option value = "4">April</option>
@@ -65,26 +65,26 @@
                 <option value = "11">November</option>
                 <option value = "12">December</option>
             </select>
-            <input type = "number" min = 0 max = 31 placeholder = "day">
-            <input type = "number" placeholder = "year" min = 1985>
+            <input type = "number" name = "day" id = "day" min = 0 max = 31 placeholder = "day">
+            <input type = "number" name = "year" id = "year" placeholder = "year" min = 1985>
         </label>
         <!-- Country of citizenship and email-->
         <br>
         <br>
         <label> Country of Citizenship: 
-            <input type = "text" id = "citizenShip">
+            <input type = "text" name = "citizenship" id = "citizenship">
         </label>
         <label> Email: 
-            <input type = "email" id = "email">
+            <input type = "email" id = "email" name = "email">
         </label>
         <!--Majors, Minors, and expected graduation date -->
         <br>
         <br>
         <label> Majors: 
-        <input type = "text" id = "majors">
+        <input type = "text" id = "majors" name = "majors">
         </label>
         <label> Minors: 
-        <input type = "text" id = "minors">
+        <input type = "text" id = "minors" name = "minors">
         </label>
         <label> Graduation Date: 
         <select name = "graduationDate" id = "graduationDate">
@@ -99,53 +99,53 @@
                 Work Availability
             </legend>
         <label> 
-            <input type = "checkbox" id = "canYouWorkSummers">
+            <input type = "checkbox" id = "canYouWorkSummers" name = "canYouWorkSummers">
             Can you work summers? 
         </label>
         <br>
         <br>
         <label> 
-            <input type = "checkbox" id = "canYouWorkDuringYear">
+            <input type = "checkbox" id = "canYouWorkDuringYear" name = "canYouWorkDuringYear">
             Can you work 15 to 20 hours per week during the school year?
         </label>
         <!--previous or current other campus jobs -->
         <br>
         <br>
         <label> 
-            <input type = "checkbox" id = "workOnCampusCurrently">
+            <input type = "checkbox" id = "workOnCampusCurrently" name = "workOnCampusCurrently">
             Do you work on campus?
         </label>
         <br>
         <br>
         <label> 
-            <input type = "checkbox" id = "workOnCampusPast">
+            <input type = "checkbox" id = "workOnCampusPast" name = "workOnCampusPast">
             Have you worked on campus?
         </label>
         <br>
         <br>
         <label> 
             Where and when?
-            <input type = "text" disabled = "disabled" id = "wwOnCampus">
+            <input type = "text" id = "wwOnCampus" name = "wwOnCampus">
         </label>
         <!-- Planning to do practicum, if so when and how long?-->
         <br>
         <br>
         <label> 
-            <input type = "checkbox" id = "Practicum">
+            <input type = "checkbox" id = "Practicum" name = "Practicum">
             Are you planning to do Practicum?
         </label>
         <br>
         <br>
         <label> 
             if so, when and how long
-            <input type = "text"  id = "PracHowLong">
+            <input type = "text"  id = "PracHowLong" name = "PracHowLong">
         </label>
         <!-- any other activities you participate in? if so, how much-->
         <br>
         <br>
         <label> 
             How many activites do you participate in?
-            <select id = "numberOfActivities">
+            <select id = "numberOfActivities" name = "numberOfActivities">
                 <option selected > 0 </option>
                 <option> 1 </option>
                 <option> 2 </option>
@@ -165,7 +165,7 @@
                 <option> 16</option>
             </select>
         </label>
-        <div id = "activity">
+        <div id = "activity" name = "activity">
         </div>
         </fieldset>
         <!-- CS and Math classes currently taken-->
@@ -177,7 +177,7 @@
             </legend>
         <label> 
             How many Math and Computer Science classes have you taken?
-            <select id = "numberOfClasses">
+            <select id = "numberOfClasses" name = "numberOfClasses">
                 <option selected> 0 </option>
                 <option> 1 </option>
                 <option> 2 </option>
@@ -198,18 +198,18 @@
             </select>
         </label>
             </fieldset>
-            <div id = "classesTaken">
+            <div id = "classesTaken" name = "classesTaken">
             </div>
         <!-- list any the other CS skills and rate those skills -->
-        <div id = "additionalSkills">
+        <div id = "additionalSkills" name = "additionalSkills">
             <h3>
                 List other CS or special skills that you may have?
                 Example: Java
                 Where did you did you get these skills?
                 Rate your skills on a scale from 1 to 5.
             </h3>
-            <input type = "text"  placeholder = "additional skills">
-            <select>
+            <input type = "text" id = "skill1" name = "skill1" placeholder = "additional skills">
+            <select id = "rating1" name = "rating1">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -217,8 +217,8 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text"  placeholder = "additional skills">
-            <select>
+            <input type = "text" id = "skill2" name = "skill2" placeholder = "additional skills">
+            <select id = "rating2" name = "rating2">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -226,8 +226,8 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text"  placeholder = "additional skills">
-            <select>
+            <input type = "text" id = "skill3" name = "skill3" placeholder = "additional skills">
+            <select id = "rating3" name = "rating3">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -235,8 +235,8 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text"  placeholder = "additional skills">
-            <select>
+            <input type = "text" id = "skill4" name = "skill4" placeholder = "additional skills">
+            <select id = "rating4" name = "rating4">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -244,17 +244,8 @@
                 <option>5</option>
             </select>
             <br>
-            <input type = "text"  placeholder = "additional skills">
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <br>
-            <input type = "text"  placeholder = "additional skills">
-            <select>
+            <input type = "text" id = "skill5" name = "skill5" placeholder = "additional skills">
+            <select id = "rating5" name = "rating5">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -269,7 +260,7 @@
         <label> 
             Do you know of anyone who currently works in the testing lab?
             If so, who?
-            <input type = "text" id = "numberOfActivites">
+            <input type = "text" id = "currentEmployee" name = "currentEmployee">
         </label>
         <br>
         <br>
