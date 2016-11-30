@@ -7,14 +7,12 @@ function init(){
 		var row = $("#" + id);
 		var insert = $("#" + id + " .moreinfo");
 		if (insert.prop("class") == "moreinfo close"){
-			alert( "close" );
 			insert.prop("class", "moreinfo open");
 			$.post(dburl, {"id" : id})
 				.done(function( data ) {
 				insert.html(data);
 			});
 		}else {
-			alert( "open" );
 			insert.prop("class", "moreinfo close");
 			insert.html("");
 		}
