@@ -5,7 +5,8 @@
 <title>
 Confirmation Page
 </title>
-<script type = "text/javascript" src = ""></script>
+<script type = "text/javascript" src = "../resources/js/submitQueries.js">
+</script>
 </head>
 <?php
 if(isset($_POST["firstName"])){
@@ -114,6 +115,9 @@ if(isset($_POST["workOnCampusPast"])){
 else{
     $workOnCampusPast = "NO";
 }
+
+//Practicum
+
 if(isset($_POST["Practicum"])){
     $practicum = "YES";
     $practHowLong = $_POST["PracHowLong"];
@@ -121,6 +125,9 @@ if(isset($_POST["Practicum"])){
 else{
     $practicum = "NO";
 }
+
+//Skills
+
 if($_POST["skill1"] != null){
     $skill1 = $_POST["skill1"];
     $rating1 = $_POST["rating1"];
@@ -156,6 +163,17 @@ $rating4 = "";
 if($_POST["skill5"] != null){
     $skill5 = $_POST["skill5"];
     $rating5 = $_POST["rating5"];
+}
+else{
+$skill5 = "";
+$rating5 = "";
+}
+
+//Activities
+
+if($_POST[""] != null){
+    $skill5 = $_POST[""];
+    $rating5 = $_POST[""];
 }
 else{
 $skill5 = "";
@@ -256,6 +274,7 @@ $rating5 = "";
 <td> <?=$skill5?> <?=$rating5?></td>
 </tr>
 </table>
+<button id = "submit">Submit</button>
 </main>
 </body>
 </html>
