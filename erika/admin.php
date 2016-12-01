@@ -3,9 +3,15 @@
 	<head>
 		<title>Lab Application Admin</title>
 		<meta charset="utf-8">
+		
 		<link rel="stylesheet" href="admin.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"type="text/javascript"></script>
 		<script type="text/javascript" src="getApplicant.js" ></script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
 		<?php
 			include 'common.php';
 			$query = init_query();
@@ -17,12 +23,19 @@
 	<body>
 	  <div id="wrapper">
 		<header>
-			<h1>Applicants: <h1>
+			<h1>Testing Lab Applicants<h1>
+			<p>(Click to expand)</p>
 		</header>
+		<nav>
+			<button id="edit">Edit Applicants</button>
+			<div class="buffer"></div>
+		</nav>
 		<main>
 			<div id=table>
 				<?php foreach ($stud as $row1){?>
 				<div id="<?=$row1["S_ID"]?>" class="studapp">
+					<div class="top">
+					<div class="check"><input type="checkbox"></div>
 					<?=$row1["fname"]?> <?=$row1["lname"]?> 
 					<div class="major">
 						<strong>Major:</strong> 
@@ -54,14 +67,18 @@
 						<strong>Expected Graduation:</strong> 
 						<?=$row1["expected_grad"] ?>
 					</div>
+					</div>
 					<div class="moreinfo close"></div>
-					
 				</div>
-				
+				<div class="buffer"></div>
 				<?php } ?>
 			</div>
+			<div>
+				<button id="delete" hidden>Delete</button>
+			</div>
 		</main>
-		<hr>
+		<footer>
+		</footer>
 	  </div>
 	</body>
 </html>

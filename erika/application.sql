@@ -34,7 +34,7 @@ CREATE TABLE `Student` (
   `birth_date` varchar(10) DEFAULT '0',
   `citizenship` varchar(70) DEFAULT '0',
   `email` varchar(100) DEFAULT '0',
-  `expected_grad` varchar(10) DEFAULT '0',
+  `expected_grad` varchar(12) DEFAULT '0',
   PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
