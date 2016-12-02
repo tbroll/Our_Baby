@@ -6,33 +6,47 @@ div .studapp{
 }
 
 .studapp .moreinfo table{
-	margin: 5px;
+	margin: 2%;
+}
+
+#wid{
+	width: 90%;
+}
+
+.moreinfo p{
+	margin: 2%;
 }
 
 .studapp .moreinfo{
-	background-color:#f3f3f3;
+	background-color:#fbfbfb;
 	border: 1px solid grey;
 }
 
 .studapp .top{
 	border: 1px solid grey;
-	padding-left:;
+	padding: 2%;
 }
 
-table, th, td, caption{
+table, th, td{
 	border:1px solid black;
 	border-collapse:collapse;
-	padding:3px;
+	padding:2%;
+}
+
+h2, h4{
+	padding:2%;
 }
 
 .buffer{
 	clear:both;
 }
 
-.check{
+input[type=checkbox]{
 	margin-right:2%;
-	margin-top:3%;
+	margin-top:5%;
 	float:right;
+	width:20px;
+	height:20px;
 }
 
 a:link {
@@ -53,7 +67,7 @@ body {
   margin: 0 auto;
   font-family: Verdana, sans-serif;
   position: relative;
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
 }
 
 header {
@@ -77,7 +91,7 @@ header p{
 
 main {
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   color: black;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -113,18 +127,18 @@ a:visited {
 
 footer {
   width: 100%;
-  background: #f7f7f7;
+  background: #f2f2f2;
   text-align: center;
   color: #231F20;
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 8pt;
-  border-bottom: 20px solid #413293;
+  border-bottom: 30px solid #413293;
 }
 
 nav {
   width: 100%;
-  background: #f7f7f7;
+  background: #f2f2f2;
   text-align: center;
 }
 
@@ -137,4 +151,8 @@ nav  button{
   float:left;
 }
 
+.print{
+	font-size:12pt;
+	margin:2%;
+}
 

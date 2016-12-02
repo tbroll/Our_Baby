@@ -29,13 +29,14 @@ function init(){
 	//edit click
 	$("#edit").click(function(){
 		var del = $("#delete");
-		var check = $(".check");
+		var check = $("input");
 		if (del.prop("hidden") == false){ //if edit is off
-			
+			check.each(function(index){$(this).prop("hidden", true);});
 			del.prop("hidden", true);
 		} else { //else edit is on
 			//change something visible
 			//add checkboxes?
+			check.each(function(index){$(this).prop("hidden", false);});
 			del.prop("hidden", false);
 		}
 	});

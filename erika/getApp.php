@@ -147,30 +147,104 @@ if (isSet($gen1)){
 	$genreturn = $gen1;
 }
 
+//create pdf
+
+
 ?>
 
 <?php if ($gen){ ?>
 
-<table><caption>General Information</caption><tr><th>Address</th><th>Phone</th>
-<th>Email</th><th>Date of Birth</th><th>Citizenship</th></tr>
+<h4>General Information</h4>
+<p><strong>Address: </strong>
 <?php foreach ($genreturn as $row){?>
-	<tr>
-	<td><?=$row["address"]?>
+	<?=$row["address"]?>
 	<?=$row["city"]?>
 	<?=$row["sta"]?>
-	<?=$row["zip"]?></td>
-	<td><?=$row["phone"]?></td>
-	<td><?=$row["email"]?></td>
-	<td><?=$row["birth_date"]?></td>
-	<td><?=$row["citizenship"]?></td>
-	</tr>
+	<?=$row["zip"]?></p>
 <?php } ?>
-</table>
+<p><strong>Phone: </strong>
+<?php foreach ($genreturn as $row){?>
+	<?=$row["phone"]?></p>
+<?php } ?>
+<p><strong>Email: </strong>
+<?php foreach ($genreturn as $row){?>
+	<?=$row["email"]?></p>
+<?php } ?>
+<p><strong>Date of Birth: </strong>
+<?php foreach ($genreturn as $row){?>
+	<?=$row["birth_date"]?></p>
+<?php } ?>
+<p><strong>Citizenship: </strong>
+<?php foreach ($genreturn as $row){?>
+	<?=$row["citizenship"]?></p>
+<?php } ?>
+<?php } ?>
+
+<?php if ($avail){ ?>
+<h4>Availability</h4>
+<p><strong>Can work 15-20 hrs/wk: </strong>
+<?php foreach ($availreturn as $row){?>
+	<?php if ($row["hours"] == 0){
+	print "no";
+	}else{ print "yes";
+	}?></p>
+<?php } ?>
+<p><strong>Working on Campus: </strong>
+<?php foreach ($availreturn as $row){?>
+
+	<td><?php if ($row["oncampus"] == 0){
+	print "no";
+	}else{ print "yes";
+	}?></p>
+<?php } ?>
+
+<?php if ($on){print "<p><strong>Worked on Campus: </strong>";} ?>
+<?php foreach ($availreturn as $row){?>
+	
+	<?php foreach ($onreturn as $row1){if ($on){if ($row1["evercamp"] == 0){
+	print "<td>no</td>";
+	}else{ print "<td>yes</td>";
+	}}} ?></p>
+<?php } ?>
+
+<?php if ($where){print "<p><strong>Where on Campus: </strong>";} ?>
+<?php foreach ($availreturn as $row){?>
+	
+	<?php foreach ($wherereturn as $row1){if ($where){
+		$wher = $row1["whereoncamp"];
+	print "<td>$wher</td>";}} ?><p>
+<?php } ?>
+
+<p><strong>Planning a Practicum: </strong>
+<?php foreach ($availreturn as $row){?>
+	<?php if ($row["practicum"] == 0){
+	print "no";
+	}else{ print "yes";
+	}?>
+	</p>
+<?php } ?>
+
+<?php if ($where){print "<p><strong>When and How Long: </strong>";} ?>
+<?php foreach ($availreturn as $row){?>
+	<?php foreach ($pracreturn as $row1){if ($prac){
+		$pract = $row1["practicum"];
+	print "<td>$pract</td>";}} ?>
+	</p>
+<?php } ?>
+
+<p><strong>Can work summers: </strong>
+<?php foreach ($availreturn as $row){?>
+	<td><?php if ($row["summer"] == 0){
+	print "no";
+	}else{ print "yes";
+	}?></p>
+<?php } ?>
+
 <?php } ?>
 
 <?php if ($act){ ?>
 
-<table><caption>Activities</caption><tr><th>Activity</th><th>Time per Week</th></tr>
+<table class="table" id="wid"><h4>Activities</h4><tr><th>Activity</th><th>Time per Week</th></tr>
 <?php foreach ($actreturn as $row){?>
 	<tr>
 	<td><?=$row["activity"]?></td>
@@ -181,7 +255,7 @@ if (isSet($gen1)){
 <?php } ?>
 
 <?php if ($course){ ?>
-<table><caption>Courses</caption><tr><th>Course</th><th>Course Number</th><th>Term</th><th>Instructor</th><th>Grade</th><th>Repeat?</th></tr>
+<table class="table" id="wid"><h4>Courses</h4><tr><th>Course</th><th>Course Number</th><th>Term</th><th>Instructor</th><th>Grade</th><th>Repeat?</th></tr>
 <?php foreach ($coursereturn as $row){?>
 	<tr>
 	<td><?=$row["name"]?></td>
@@ -199,7 +273,7 @@ if (isSet($gen1)){
 <?php } ?>
 
 <?php if ($skills){ ?>
-<table><caption>Skills</caption><tr><th>Skill</th><th>Rating</th></tr>
+<table class="table" id="wid"><h4>Skills</h4><tr><th>Skill</th><th>Rating</th></tr>
 <?php foreach ($skillsreturn as $row){?>
 	<tr>
 	<td><?=$row["skill"]?></td>
@@ -209,50 +283,8 @@ if (isSet($gen1)){
 </table>
 <?php } ?>
 
-<?php if ($avail){ ?>
-<table><caption>Availability</caption>
-<tr><th>Can work 15-20 hrs/wk</th>
-<th>Working on Campus</th>
-<?php if ($on){print "<th>Worked on Campus</th>";} ?>
-<?php if ($where){print "<th>Where on Campus</th>";} ?>
-<th>Planning a Practicum</th>
-<?php if ($where){print "<th>When and How Long</th>";} ?>
-<th>Can work summers</th></tr>
-<?php foreach ($availreturn as $row){?>
-	<tr>
-	<td><?php if ($row["hours"] == 0){
-	print "no";
-	}else{ print "yes";
-	}?></td>
-	
-	<td><?php if ($row["oncampus"] == 0){
-	print "no";
-	}else{ print "yes";
-	}?></td>
-	
-	<?php foreach ($onreturn as $row1){if ($on){if ($row1["evercamp"] == 0){
-	print "<td>no</td>";
-	}else{ print "<td>yes</td>";
-	}}} ?>
-	
-	<?php foreach ($wherereturn as $row1){if ($where){
-		$wher = $row1["whereoncamp"];
-	print "<td>$wher</td>";}} ?>
-	
-	<td><?php if ($row["practicum"] == 0){
-	print "no";
-	}else{ print "yes";
-	}?></td>
-	
-	<?php foreach ($pracreturn as $row1){if ($prac){
-		$pract = $row1["practicum"];
-	print "<td>$pract</td>";}} ?>
-	
-	<td><?php if ($row["summer"] == 0){
-	print "no";
-	}else{ print "yes";
-	}?></td>
-	</tr>
-<?php } ?>
-</table>
-<?php } ?>
+<form action="CS385_Syl.pdf" method="POST">
+	<input type="submit" class="print btn" value="Easy Print">
+</form>
+
+<p></p>
