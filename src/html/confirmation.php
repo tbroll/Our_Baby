@@ -1,13 +1,3 @@
-<!doctype html>
-<html lang = "en">
-<head>
-<meta charset = "UTF-8">
-<title>
-Confirmation Page
-</title>
-<script type = "text/javascript" src = "../resources/js/submitQueries.js">
-</script>
-</head>
 <?php
 if(isset($_POST["firstName"])){
     $firstname = $_POST["firstName"];
@@ -171,15 +161,129 @@ $rating5 = "";
 
 //Activities
 
-if($_POST[""] != null){
-    $skill5 = $_POST[""];
-    $rating5 = $_POST[""];
+if($_POST["activity1"] != null){
+    $activity1= $_POST["activity1"];
+    $ts1 = $_POST["timeSpent1"];
 }
 else{
-$skill5 = "";
-$rating5 = "";
+$activity1 = "";
+$ts1 = "";
+}
+if($_POST["activity2"] != null){
+    $activity2= $_POST["activity2"];
+    $ts2 = $_POST["timeSpent2"];
+}
+else{
+$activity2 = "";
+$ts2 = "";
+}
+if($_POST["activity3"] != null){
+    $activity3= $_POST["activity3"];
+    $ts3 = $_POST["timeSpent3"];
+}
+else{
+$activity3 = "";
+$ts3 = "";
+}
+if($_POST["activity4"] != null){
+    $activity4= $_POST["activity4"];
+    $ts4 = $_POST["timeSpent4"];
+}
+else{
+$activity4 = "";
+$ts4 = "";
+}
+if($_POST["activity5"] != null){
+    $activity5= $_POST["activity5"];
+    $ts5 = $_POST["timeSpent5"];
+}
+else{
+$activity5 = "";
+$ts5 = "";
+}
+if($_POST["classType"] != null){
+    $classType = $_POST["classType"];
+    $course1 = $_POST["course#1"];
+    $className1 = $_POST["className1"];
+    $term = $_POST["term"];
+    $grade = $_POST["grade"];
+    $instructor = $_POST["instructor"];
+    $retake = $_POST["retake"];
+}
+else{
+    $classType = "";
+    $course1 = "";
+    $className1 = "";
+    $term = "";
+    $grade = "";
+    $instructor = "";
+    $retake = "";
+}
+if($_POST["classType"] != null){
+    $classType2= $_POST["classType2"];
+    $course2 = $_POST["course#2"];
+    $className2 = $_POST["className2"];
+    $term2= $_POST["term2"];
+    $grade2= $_POST["grade2"];
+    $instructor2= $_POST["instructor2"];
+    $retake2= $_POST["retake2"];
+}
+else{
+    $classType2= "";
+    $course2 = "";
+    $className2 = "";
+    $term2= "";
+    $grade2= "";
+    $instructor2= "";
+    $retake2= "";
+}
+if($_POST["classType3"] != null){
+    $classType3= $_POST["classType3"];
+    $course3 = $_POST["course#3"];
+    $className3 = $_POST["className3"];
+    $term3 = $_POST["term3"];
+    $grade3 = $_POST["grade3"];
+    $instructor3= $_POST["instructor3"];
+    $retake3= $_POST["retake3"];
+}
+else{
+    $classType3= "";
+    $course3 = "";
+    $className3 = "";
+    $term3 = "";
+    $grade3 = "";
+    $instructor3 = "";
+    $retake3 = "";
+}
+if($_POST["classType4"] != null){
+    $classType4 = $_POST["classType4"];
+    $course4 = $_POST["course#4"];
+    $className4 = $_POST["className4"];
+    $term4 = $_POST["term4"];
+    $grade4 = $_POST["grade4"];
+    $instructor4 = $_POST["instructor4"];
+    $retake4 = $_POST["retake4"];
+}
+else{
+    $classType4= "";
+    $course4 = "";
+    $className4 = "";
+    $term4 = "";
+    $grade4 = "";
+    $instructor4 = "";
+    $retake4 = "";
 }
 ?>
+<!doctype html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<title>
+Confirmation Page
+</title>
+<script type = "text/javascript" src = "../resources/js/submitQueries.js">
+</script>
+</head>
 <body>
 <header>
 <h1>Thank you <?=$firstname?> <?=$lastname?> for applying to the testing lab</h1>
@@ -250,6 +354,28 @@ $rating5 = "";
 <td>Practicum?</td>
 <td><?=$practicum?></td>
 <td><?=$practHowLong?></td>
+</tr>
+</table>
+<hr>
+<table>
+<tr>
+<th>Activity</th>
+<th>Time in minutes spent on activity</th>
+</tr>
+<tr>
+<td> <?=$activity1?> <?=$ts1?></td>
+</tr>
+<tr>
+<td> <?=$activity2?> <?=$ts2?></td>
+</tr>
+<tr>
+<td> <?=$activity3?> <?=$ts3?></td>
+</tr>
+<tr>
+<td> <?=$activity4?> <?=$ts4?></td>
+</tr>
+<tr>
+<td> <?=$activity5?> <?=$ts5?></td>
 </tr>
 </table>
 <hr>
