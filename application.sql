@@ -1,4 +1,4 @@
-@@ -1,184 +0,0 @@
+
 --
 -- Host: localhost    Database: application
 -- ------------------------------------------------------
@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `Student`;
 CREATE TABLE `Student` (
   `fname` varchar(120) NOT NULL DEFAULT '0',
   `lname` varchar(120) NOT NULL DEFAULT '0',
-  `S_ID` varchar(10) DEFAULT NULL,
+  `S_ID` varchar(10)  NOT NULL,
   `address` varchar(120) DEFAULT NULL,
   `phone` varchar(10) DEFAULT NULL,
   `city` varchar(30) DEFAULT '0',
@@ -34,7 +34,7 @@ CREATE TABLE `Student` (
   `birth_date` varchar(10) DEFAULT '0',
   `citizenship` varchar(70) DEFAULT '0',
   `email` varchar(100) DEFAULT '0',
-  `expected_grad` varchar(10) DEFAULT '0',
+  `expected_grad` varchar(12) DEFAULT '0',
   PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `Major`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Major` (
   `major` varchar(60) NOT NULL DEFAULT '0',
-  `S_ID` varchar(10) DEFAULT NULL,
+  `S_ID` varchar(10) NOT NULL,
   PRIMARY KEY (`S_ID`,`major`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,8 +64,8 @@ DROP TABLE IF EXISTS `Minor`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Minor` (
   `minor` varchar(60) NOT NULL DEFAULT '0',
-  `S_ID` varchar(10) DEFAULT NULL,
-  PRIMARY KEY (`S_ID, `minor`)
+  `S_ID` varchar(10) NOT NULL,
+  PRIMARY KEY (`S_ID`, `minor`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -78,7 +78,7 @@ DROP TABLE IF EXISTS `Activities`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Activities` (
-  `S_ID` varchar(10) DEFAULT NULL,
+  `S_ID` varchar(10) NOT NULL,
   `activity` varchar(60) NOT NULL DEFAULT '0',
   `time_per_week` varchar(60) NOT NULL DEFAULT '0',
   PRIMARY KEY (`S_ID`, `activity`)
@@ -94,7 +94,7 @@ DROP TABLE IF EXISTS `Courses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Courses` (
-  `S_ID` varchar(10) DEFAULT NULL,
+  `S_ID` varchar(10) NOT NULL,
   `course_num` varchar(10) NOT NULL DEFAULT '0',
   `name` varchar(70) NOT NULL DEFAULT '0',
   `term` varchar(10) NOT NULL DEFAULT '0',
@@ -114,7 +114,7 @@ DROP TABLE IF EXISTS `Skills`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Skills` (
-  `S_ID` varchar(40) DEFAULT NULL,
+  `S_ID` varchar(40) NOT NULL,
   `skill` varchar(60) NOT NULL DEFAULT '0',
   `Rate` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`S_ID`, `skill`)
@@ -130,7 +130,7 @@ DROP TABLE IF EXISTS `WorkInfo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `WorkInfo` (
-  `S_ID` varchar(40) DEFAULT NULL,
+  `S_ID` varchar(40) NOT NULL,
   `summer` boolean NOT NULL DEFAULT '0',
   `hours` boolean NOT NULL DEFAULT '0',
   `oncampus` boolean NOT NULL DEFAULT '0',
@@ -148,7 +148,7 @@ DROP TABLE IF EXISTS `EverOnCamp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `EverOnCamp` (
-  `S_ID` varchar(40) DEFAULT NULL,
+  `S_ID` varchar(40) NOT NULL,
   `evercamp` boolean NOT NULL DEFAULT '0',
   PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -164,7 +164,7 @@ DROP TABLE IF EXISTS `OnCampusWhere`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `OnCampusWhere` (
-  `S_ID` varchar(40) DEFAULT NULL,
+  `S_ID` varchar(40) NOT NULL,
   `whereoncamp` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -179,7 +179,7 @@ DROP TABLE IF EXISTS `Practicum`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Practicum` (
-  `S_ID` varchar(40) DEFAULT NULL,
+  `S_ID` varchar(40) NOT NULL,
   `practicum` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

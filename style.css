@@ -6,16 +6,15 @@ a:link {
 
 body {
   margin: 0 auto;
-  font-family: Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   position: relative;
   height: 100%;
   color: #13152E;
-   background: #413293;
+  background: #dedede !important;
 }
 
 header {
   width: 100%;
-  background: #413293;
   color: white;
   text-align: center;
   padding-top: 40px;
@@ -28,30 +27,33 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 90vh;
-  padding-top: 120px;
+  min-height: 80vh;
+  padding-top: 100px;
 }
 
 
 
 main {
   width: 100%;
-  background: #413293;
   color: #FFFFFF;
   text-align: center;
-  padding-top: 30px;
   padding-bottom: 30px;
   font-size: 11pt;
 }
 
   /* unvisited link */
 a:link {
-    color: white;
+    color: gray;
 }
 
 /* visited link */
 a:visited {
-    color: white;
+    color: gray;
+}
+
+hr {
+  border-top: solid #CCC 1px !important;
+  padding-bottom:15px;
 }
 
 footer {
@@ -64,19 +66,87 @@ footer {
   font-size: 8pt;
 }
 
+nav ul {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
 nav {
   width: 100%;
-  background: #413293;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  background: #403677;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
 }
 
-nav  a{
-  margin-left: 25px;
+.main h3 {
+    border:#403677;
+    padding: 15px;
+    margin: 15px;
+	background-color:#403677;
+	color:white;
 }
 
-img {
-  overflow: hidden;
+.container h4 {
+    border:#403677;
+	width:75%;
+    padding: 5px;
+    margin: 5px;
+	background-color:#403677;
+	color:white;
 }
 
+.container .answer {
+	width:75%;
+}
+
+.answer {
+	padding:15px;
+}
+
+ul .nav {
+  margin: 0 auto !important;
+}
+
+.nav>li>a {
+  color: #FFFFFF;
+}
+
+.nav>li>a:focus, .nav>li>a:hover  {
+  background: none !important;
+}
+
+
+.box {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  margin-top: 35px;
+}
+
+.box-title {
+  height: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.box-paragraph {
+  padding: 35px 20px;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.subpage {
+  min-height: 100px;
+  padding-top: 50px;
+}
+
+.main-subpage {
+  padding-top: 30px;
+  color: #333;
+  text-align: left;
+}
+
+.following-intro {
+  text-align: center;
+  padding-top: 30px
+}
