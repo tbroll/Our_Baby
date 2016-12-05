@@ -1,0 +1,130 @@
+
+div .studapp{
+	background-color:white;
+	border:1px solid grey;
+	margin: 10px;
+}
+
+.studapp .moreinfo table{
+	margin: 5px;
+}
+
+.studapp .moreinfo{
+	background-color:#f3f3f3;
+	border: 1px solid grey;
+}
+
+.studapp .top{
+	border: 1px solid grey;
+}
+
+table, th, td, caption{
+	border:1px solid black;
+	border-collapse:collapse;
+	padding:3px;
+}
+
+.buffer{
+	clear:both;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#delete{
+	margin-left: 25px;
+	margin-top: 20px;
+	background-color: #f0f0f0;
+	font-size:12pt;
+	padding:5px;
+	float:left;
+}
+
+
+body {
+  margin: 0 auto;
+  font-family: Verdana, sans-serif;
+  position: relative;
+  background-color: #413293;
+}
+
+header {
+  width: 100%;
+  background: #413293;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 120px;
+}
+
+header p{
+	height: 50%%;
+	color: #f2f2f2;
+}
+
+main {
+  width: 100%;
+  background: #413293;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 11pt;
+}
+
+#login{
+	width:100%;
+	background-color: #f0f0f0;
+	border-top: 1px solid grey;
+	border-bottom:1px solid grey;
+}
+
+form{
+	margin:10px;
+}
+
+#login input{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:20px;
+}
+
+  /* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+footer {
+  width: 100%;
+  background: #413293;
+  text-align: center;
+  color: #231F20;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 8pt;
+}
+
+nav {
+  width: 100%;
+  background: #413293;
+  text-align: center;
+}
+
+nav  button{
+  margin-left: 25px;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  font-size:12pt;
+  padding:5px;
+  float:left;
+}
