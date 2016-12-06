@@ -21,43 +21,7 @@ if(isset($_POST["zipCode"])){
     $zip = $_POST["zipCode"];
 }
 if(isset($_POST["month"])){
-    switch($_POST["month"]){
-    case 1:
-        $DOB_month = "January";
-        break;
-    case 2:
-        $DOB_month = "Febuary";
-        break;
-    case 3:
-        $DOB_month = "March";
-        break;
-    case 4:
-        $DOB_month = "April";
-        break;
-    case 5:
-        $DOB_month = "May";
-        break;
-    case 6:
-        $DOB_month = "June";
-        break;
-    case 7:
-        $DOB_month = "July";
-        break;
-    case 8:
-        $DOB_month = "August";
-        break;
-    case 9:
-        $DOB_month = "September";
-        break;
-    case 10:
-        $DOB_month = "October";
-        break;
-    case 11:
-        $DOB_month = "November";
-        break;
-    default:
-        $DOB_month = "December";
-    }
+    $DOB_month = $_POST["month"];
 }
 if(isset($_POST["day"])){
     $DOB_day = $_POST["day"];
@@ -104,16 +68,18 @@ if(isset($_POST["workOnCampusPast"])){
 }
 else{
     $workOnCampusPast = "NO";
+    $ww = "";
 }
 
 //Practicum
 
 if(isset($_POST["Practicum"])){
     $practicum = "YES";
-    $practHowLong = $_POST["PracHowLong"];
+    $pracHowLong = $_POST["PracHowLong"];
 }
 else{
     $practicum = "NO";
+    $pracHowLong = "";
 }
 
 //Skills
@@ -201,10 +167,10 @@ else{
 $activity5 = "";
 $ts5 = "";
 }
-if($_POST["classType"] != null){
+if(isset($_POST["classType"])){
     $classType = $_POST["classType"];
-    $course1 = $_POST["course#1"];
-    $className1 = $_POST["className1"];
+    $course = $_POST["course"];
+    $className = $_POST["className"];
     $term = $_POST["term"];
     $grade = $_POST["grade"];
     $instructor = $_POST["instructor"];
@@ -212,16 +178,16 @@ if($_POST["classType"] != null){
 }
 else{
     $classType = "";
-    $course1 = "";
-    $className1 = "";
+    $course = "";
+    $className = "";
     $term = "";
     $grade = "";
     $instructor = "";
     $retake = "";
 }
-if($_POST["classType"] != null){
+if(isset($_POST["classType2"])){
     $classType2= $_POST["classType2"];
-    $course2 = $_POST["course#2"];
+    $course2 = $_POST["course2"];
     $className2 = $_POST["className2"];
     $term2= $_POST["term2"];
     $grade2= $_POST["grade2"];
@@ -237,9 +203,9 @@ else{
     $instructor2= "";
     $retake2= "";
 }
-if($_POST["classType3"] != null){
+if(isset($_POST["classType3"])){
     $classType3= $_POST["classType3"];
-    $course3 = $_POST["course#3"];
+    $course3 = $_POST["course3"];
     $className3 = $_POST["className3"];
     $term3 = $_POST["term3"];
     $grade3 = $_POST["grade3"];
@@ -255,9 +221,9 @@ else{
     $instructor3 = "";
     $retake3 = "";
 }
-if($_POST["classType4"] != null){
+if(isset($_POST["classType4"])){
     $classType4 = $_POST["classType4"];
-    $course4 = $_POST["course#4"];
+    $course4 = $_POST["course4"];
     $className4 = $_POST["className4"];
     $term4 = $_POST["term4"];
     $grade4 = $_POST["grade4"];
@@ -323,7 +289,7 @@ Confirmation Page
 </tr>
 <tr>
 <td>Date of Birth</td>
-<td><?=$DOB_month?> <?=$DOB_day?>, <?=$DOB_year?></td>
+<td><?=$DOB_month?> <?=$DOB_day?> <?=$DOB_year?></td>
 </tr>
 <tr>
 <td>major</td>
@@ -353,7 +319,7 @@ Confirmation Page
 <tr>
 <td>Practicum?</td>
 <td><?=$practicum?></td>
-<td><?=$practHowLong?></td>
+<td><?=$pracHowLong?></td>
 </tr>
 </table>
 <hr>
@@ -363,19 +329,72 @@ Confirmation Page
 <th>Time in minutes spent on activity</th>
 </tr>
 <tr>
-<td> <?=$activity1?> <?=$ts1?></td>
+<td> <?=$activity1?></td>
+<td> <?=$ts1?><td>
 </tr>
 <tr>
-<td> <?=$activity2?> <?=$ts2?></td>
+<td> <?=$activity2?></td>
+<td> <?=$ts2?><td>
 </tr>
 <tr>
-<td> <?=$activity3?> <?=$ts3?></td>
+<td> <?=$activity3?></td>
+<td> <?=$ts3?><td>
 </tr>
 <tr>
-<td> <?=$activity4?> <?=$ts4?></td>
+<td> <?=$activity4?></td>
+<td> <?=$ts4?><td>
 </tr>
 <tr>
-<td> <?=$activity5?> <?=$ts5?></td>
+<td> <?=$activity5?></td>
+<td> <?=$ts5?><td>
+</tr>
+</table>
+<hr>
+<table>
+<tr>
+<th>Department</th>
+<th>Class ID</th>
+<th>Class Name</th>
+<th>Term</th>
+<th>Grade</th>
+<th>Instructor</th>
+<th>Retake?</th>
+</tr>
+<tr>
+<td> <?=$classType?></td>
+<td> <?=$course?></td>
+<td> <?=$className?></td>
+<td> <?=$term?></td>
+<td> <?=$grade?></td>
+<td> <?=$instructor?></td>
+<td> <?=$retake?></td>
+</tr>
+<tr>
+<td> <?=$classType2?></td>
+<td> <?=$course2?></td>
+<td> <?=$className2?></td>
+<td> <?=$term2?></td>
+<td> <?=$grade2?></td>
+<td> <?=$instructor2?></td>
+<td> <?=$retake2?></td>
+</tr>
+<tr>
+<td> <?=$classType3?></td>
+<td> <?=$course3?></td>
+<td> <?=$className3?></td>
+<td> <?=$term3?> </td>
+<td><?=$grade3?></td>
+<td> <?=$instructor3?></td>
+<td> <?=$retake3?></td>
+</tr>
+<tr>
+<td> <?=$classType4?></td>
+<td> <?=$course4?> </td>
+<td><?=$className4?></td>
+<td> <?=$term4?></td>
+<td> <?=$grade4?></td>
+<td> <?=$instructor4?></td>
+<td> <?=$retake4?></td>
 </tr>
 </table>
 <hr>
@@ -385,22 +404,27 @@ Confirmation Page
 <th>ratings</th>
 </tr>
 <tr>
-<td> <?=$skill1?> <?=$rating1?></td>
+<td> <?=$skill1?> </td>
+<td><?=$rating1?></td>
 </tr>
 <tr>
-<td> <?=$skill2?> <?=$rating2?></td>
+<td> <?=$skill2?> </td>
+<td><?=$rating2?></td>
 </tr>
 <tr>
-<td> <?=$skill3?> <?=$rating3?></td>
+<td> <?=$skill3?> </td>
+<td><?=$rating3?></td>
 </tr>
 <tr>
-<td> <?=$skill4?> <?=$rating4?></td>
+<td> <?=$skill4?></td>
+<td> <?=$rating4?></td>
 </tr>
 <tr>
-<td> <?=$skill5?> <?=$rating5?></td>
+<td> <?=$skill5?> </td>
+<td><?=$rating5?></td>
 </tr>
 </table>
-<button id = "submit">Submit</button>
+<!--<button id = "submit">Submit</button>-->
 </main>
 </body>
 </html>

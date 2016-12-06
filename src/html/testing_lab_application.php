@@ -13,187 +13,188 @@
     <div class="container">
       <section id="intro">
 
-    <form action = "confirmation.php" method = "post">
-        <!--ask Dr. C about the importance of "country of citizenship -->
-        <!-- each comment will be a line on the webpage-->
-        <!-- First name and last name-->
-        <fieldset>
-            <legend>
-                Personal Information
-            </legend>
-        <label> First Name: 
-            <input type = "text" name = "firstName"  id = "firstName">
-        </label>
-        <label> Last Name: 
-            <input type = "text" name = "lastName" id = "lastName">
-        </label>
-        <br>
-        <br>
-        <label> Address: 
-            <input type = "text" name = "address" id = "address">
-        </label>
-        <label> Phone Number: 
-            <input type = "number" min = 0 max = 19999999999 name = "phoneNumber" id = "phoneNumber">
-        </label>
-        <!-- city, state, zip code, and date of birth-->
-        <br>
-        <br>
-        <label> City: 
-            <input type = "text" name = "city" id = "city">
-        </label>
-        <label> State: 
-            <input type = "text" name = "state" id = "state">
-        </label>
-        <label> Zip Code: 
-            <input type = "text" name = "zipCode" id = "zipCode">
-        </label>
-        <label> Date Of Birth:
-            <select  id = "month" name = "month">
-                <option value = "1">January</option>
-                <option value = "2">Febuary</option>
-                <option value = "3">March</option>
-                <option value = "4">April</option>
-                <option value = "5">May</option>
-                <option value = "6">June</option>
-                <option value = "7">July</option>
-                <option value = "8">August</option>
-                <option value = "9">September</option>
-                <option value = "10">October</option>
-                <option value = "11">November</option>
-                <option value = "12">December</option>
-            </select>
-            <input type = "number" name = "day" id = "day" min = 0 max = 31 placeholder = "day">
-            <input type = "number" name = "year" id = "year" placeholder = "year" min = 1985>
-        </label>
-        <!-- Country of citizenship and email-->
-        <br>
-        <br>
-        <label> Country of Citizenship: 
-            <input type = "text" name = "citizenship" id = "citizenship">
-        </label>
-        <label> Email: 
-            <input type = "email" id = "email" name = "email">
-        </label>
-        <!--Majors, Minors, and expected graduation date -->
-        <br>
-        <br>
-        <label> Majors: 
-        <input type = "text" id = "majors" name = "majors">
-        </label>
-        <label> Minors: 
-        <input type = "text" id = "minors" name = "minors">
-        </label>
-        <label> Graduation Date: 
-        <select name = "graduationDate" id = "graduationDate">
-        </select> 
-        </label>
-    </fieldset>
-        <br>
-        <br>
-        <!-- Work availability-->
-        <fieldset>
-            <legend>
-                Work Availability
-            </legend>
-        <label> 
-            <input type = "checkbox" id = "canYouWorkSummers" name = "canYouWorkSummers">
-            Can you work summers? 
-        </label>
-        <br>
-        <br>
-        <label> 
-            <input type = "checkbox" id = "canYouWorkDuringYear" name = "canYouWorkDuringYear">
-            Can you work 15 to 20 hours per week during the school year?
-        </label>
-        <!--previous or current other campus jobs -->
-        <br>
-        <br>
-        <label> 
-            <input type = "checkbox" id = "workOnCampusCurrently" name = "workOnCampusCurrently">
-            Do you work on campus?
-        </label>
-        <br>
-        <br>
-        <label> 
-            <input type = "checkbox" id = "workOnCampusPast" name = "workOnCampusPast">
-            Have you worked on campus?
-        </label>
-        <br>
-        <br>
-        <label> 
-            Where and when?
-            <input type = "text" id = "wwOnCampus" name = "wwOnCampus">
-        </label>
-        <!-- Planning to do practicum, if so when and how long?-->
-        <br>
-        <br>
-        <label> 
-            <input type = "checkbox" id = "Practicum" name = "Practicum">
-            Are you planning to do Practicum?
-        </label>
-        <br>
-        <br>
-        <label> 
-            if so, when and how long
-            <input type = "text"  id = "PracHowLong" name = "PracHowLong">
-        </label>
-        <!-- any other activities you participate in? if so, how much-->
-        <br>
-        <br>
-        <div id = "activity" name = "activity">
-            <h4>Number of activities particiated in and amount of time spent on each activity </h4>
+        <form action = "confirmation.php" method = "post">
+            <!--ask Dr. C about the importance of "country of citizenship -->
+            <!-- each comment will be a line on the webpage-->
+            <!-- First name and last name-->
+            <fieldset>
+                <legend>
+                    Personal Information
+                </legend>
+            <label> First Name: 
+                <input type = "text" name = "firstName"  id = "firstName">
+            </label>
+            <label> Last Name: 
+                <input type = "text" name = "lastName" id = "lastName">
+            </label>
             <br>
-            <input type = "text" name = "activity1" id = "activity1" placeholder = "Activity">
-            <input type = "number" min = 0 name = "timeSpent1" id = "timeSpent1" placeholder = "Time (in minutes) per week">
             <br>
-            <input type = "text" name = "activity2" id = "activity2" placeholder = "Activity">
-            <input type = "number" min = 0 name = "timeSpent2" id = "timeSpent2" placeholder = "Time (in minutes) per week">
+            <label> Address: 
+                <input type = "text" name = "address" id = "address">
+            </label>
+            <label> Phone Number: 
+                <input type = "number" min = 0 max = 19999999999 name = "phoneNumber" id = "phoneNumber">
+            </label>
+            <!-- city, state, zip code, and date of birth-->
             <br>
-            <input type = "text" name = "activity3" id = "activity3" placeholder = "Activity">
-            <input type = "number" min = 0 name = "timeSpent3" id = "timeSpent3" placeholder = "Time (in minutes) per week">
             <br>
-            <input type = "text" name = "activity4" id = "activity4" placeholder = "Activity">
-            <input type = "number" min = 0 name = "timeSpent4" id = "timeSpent4" placeholder = "Time (in minutes) per week">
+            <label> City: 
+                <input type = "text" name = "city" id = "city">
+            </label>
+            <label> State: 
+                <input type = "text" name = "state" id = "state">
+            </label>
+            <label> Zip Code: 
+                <input type = "text" name = "zipCode" id = "zipCode">
+            </label>
+            <label> Date Of Birth:
+                <select  id = "month" name = "month">
+                    <option value = "">N/A</option>
+                    <option value = "January">January</option>
+                    <option value = "Febuary">Febuary</option>
+                    <option value = "March">March</option>
+                    <option value = "April">April</option>
+                    <option value = "May">May</option>
+                    <option value = "June">June</option>
+                    <option value = "July">July</option>
+                    <option value = "August">August</option>
+                    <option value = "September">September</option>
+                    <option value = "October">October</option>
+                    <option value = "November">November</option>
+                    <option value = "December">December</option>
+                </select>
+                <input type = "number" name = "day" id = "day" min = 0 max = 31 placeholder = "day">
+                <input type = "number" name = "year" id = "year" placeholder = "year" min = 1985>
+            </label>
+            <!-- Country of citizenship and email-->
             <br>
-            <input type = "text" name = "activity5" id = "activity5" placeholder = "Activity">
-            <input type = "number" min = 0 name = "timeSpent5" id = "timeSpent5" placeholder = "Time (in minutes) per week">
-        </div>
+            <br>
+            <label> Country of Citizenship: 
+                <input type = "text" name = "citizenship" id = "citizenship">
+            </label>
+            <label> Email: 
+                <input type = "email" id = "email" name = "email">
+            </label>
+            <!--Majors, Minors, and expected graduation date -->
+            <br>
+            <br>
+            <label> Majors: 
+            <input type = "text" id = "majors" name = "majors">
+            </label>
+            <label> Minors: 
+            <input type = "text" id = "minors" name = "minors">
+            </label>
+            <label> Graduation Date: 
+            <select name = "graduationDate" id = "graduationDate">
+            </select> 
+            </label>
         </fieldset>
-        <!-- CS and Math classes currently taken-->
-        <br>
-        <br>
-        <fieldset>
-            <legend>
-                Classes Taken:
-            </legend>
-        <label> 
-            How many Math and Computer Science classes have you taken?
-<!--            <select id = "numberOfClasses" name = "numberOfClasses">
-                <option selected> 0 </option>
-                <option> 1 </option>
-                <option> 2 </option>
-                <option> 3 </option>
-                <option> 4 </option>
-                <option> 5 </option>
-                <option> 6 </option>
-                <option> 7 </option>
-                <option> 8 </option>
-                <option> 9 </option>
-                <option> 10</option>
-                <option> 11</option>
-                <option> 12</option>
-                <option> 13</option>
-                <option> 14</option>
-                <option> 15</option>
-                <option> 16</option>
-            </select>
-            -->    </label>
-            <div id = "classesTaken" name = "classesTaken">
+            <br>
+            <br>
+            <!-- Work availability-->
+            <fieldset>
+                <legend>
+                    Work Availability
+                </legend>
+            <label> 
+                <input type = "checkbox" id = "canYouWorkSummers" name = "canYouWorkSummers">
+                Can you work summers? 
+            </label>
+            <br>
+            <br>
+            <label> 
+                <input type = "checkbox" id = "canYouWorkDuringYear" name = "canYouWorkDuringYear">
+                Can you work 15 to 20 hours per week during the school year?
+            </label>
+            <!--previous or current other campus jobs -->
+            <br>
+            <br>
+            <label> 
+                <input type = "checkbox" id = "workOnCampusCurrently" name = "workOnCampusCurrently">
+                Do you work on campus?
+            </label>
+            <br>
+            <br>
+            <label> 
+                <input type = "checkbox" id = "workOnCampusPast" name = "workOnCampusPast">
+                Have you worked on campus?
+            </label>
+            <br>
+            <br>
+            <label> 
+                Where and when?
+                <input type = "text" id = "wwOnCampus" name = "wwOnCampus">
+            </label>
+            <!-- Planning to do practicum, if so when and how long?-->
+            <br>
+            <br>
+            <label> 
+                <input type = "checkbox" id = "Practicum" name = "Practicum">
+                Are you planning to do Practicum?
+            </label>
+            <br>
+            <br>
+            <label> 
+                if so, when and how long
+                <input type = "text"  id = "PracHowLong" name = "PracHowLong">
+            </label>
+            <!-- any other activities you participate in? if so, how much-->
+            <br>
+            <br>
+            <div id = "activity" name = "activity">
+                <h4>Number of activities particiated in and amount of time spent on each activity </h4>
+                <br>
+                <input type = "text" name = "activity1" id = "activity1" placeholder = "Activity">
+                <input type = "number" min = 0 name = "timeSpent1" id = "timeSpent1" placeholder = "Time (in minutes) per week">
+                <br>
+                <input type = "text" name = "activity2" id = "activity2" placeholder = "Activity">
+                <input type = "number" min = 0 name = "timeSpent2" id = "timeSpent2" placeholder = "Time (in minutes) per week">
+                <br>
+                <input type = "text" name = "activity3" id = "activity3" placeholder = "Activity">
+                <input type = "number" min = 0 name = "timeSpent3" id = "timeSpent3" placeholder = "Time (in minutes) per week">
+                <br>
+                <input type = "text" name = "activity4" id = "activity4" placeholder = "Activity">
+                <input type = "number" min = 0 name = "timeSpent4" id = "timeSpent4" placeholder = "Time (in minutes) per week">
+                <br>
+                <input type = "text" name = "activity5" id = "activity5" placeholder = "Activity">
+                <input type = "number" min = 0 name = "timeSpent5" id = "timeSpent5" placeholder = "Time (in minutes) per week">
+            </div>
+            </fieldset>
+            <!-- CS and Math classes currently taken-->
+            <br>
+            <br>
+            <fieldset>
+                <legend>
+                    Classes Taken:
+                </legend>
+            <label> 
+                How many Math and Computer Science classes have you taken?
+    <!--            <select id = "numberOfClasses" name = "numberOfClasses">
+                    <option selected> 0 </option>
+                    <option> 1 </option>
+                    <option> 2 </option>
+                    <option> 3 </option>
+                    <option> 4 </option>
+                    <option> 5 </option>
+                    <option> 6 </option>
+                    <option> 7 </option>
+                    <option> 8 </option>
+                    <option> 9 </option>
+                    <option> 10</option>
+                    <option> 11</option>
+                    <option> 12</option>
+                    <option> 13</option>
+                    <option> 14</option>
+                    <option> 15</option>
+                    <option> 16</option>
+                </select>
+                -->    </label>
+                <div id = "classesTaken" name = "classesTaken">
 
-                <label> <input type = "radio" name = "classType">Computer Science</label>
-                <label> <input type = "radio" name = "classType">Math </label>
-                <input type = "text" name = "course#1" placeholder = "class number">
-                <input type = "text" name = "className1" placeholder = "class name">
+                    <label> <input type = "radio" name = "classType" value = "Computer Science">Computer Science</label>
+                <label> <input type = "radio" name = "classType" value = "Math">Math </label>
+                <input type = "text" name = "course" placeholder = "class number">
+                <input type = "text" name = "className" placeholder = "class name">
                 <label> Term: <label>
                 <select id = "term" name = "term">
                 </select>
@@ -204,6 +205,7 @@
                     <option>C</option>
                     <option>D</option>
                     <option>F</option>
+                    </select>
                 <input type = "text" name = "instructor" id = "instructor" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake" name = "retake">
@@ -212,9 +214,9 @@
                 </select>
                 <br>
 
-                <label> <input type = "radio" name = "classType2">Computer Science</label>
-                <label> <input type = "radio" name = "classType2">Math </label>
-                <input type = "text" name = "course#2" placeholder = "class number">
+                <label> <input type = "radio" name = "classType2" value = "Computer Science">Computer Science</label>
+                <label> <input type = "radio" name = "classType2" value = "Math">Math </label>
+                <input type = "text" name = "course2" placeholder = "class number">
                 <input type = "text" name = "className2" placeholder = "class name">
                 <label> Term: <label>
                 <select id = "term2" name = "term2">
@@ -226,6 +228,7 @@
                     <option>C</option>
                     <option>D</option>
                     <option>F</option>
+                    </select>
                 <input type = "text" name = "instructor2" id = "instructor2" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake2" name = "retake2">
@@ -234,9 +237,9 @@
                 </select>
                 <br>
 
-                <label> <input type = "radio" name = "classType3">Computer Science</label>
-                <label> <input type = "radio" name = "classType3">Math </label>
-                <input type = "text" name = "course#3" placeholder = "class number">
+                <label> <input type = "radio" name = "classType3" value = "Computer Science">Computer Science</label>
+                <label> <input type = "radio" name = "classType3" value = "Math">Math </label>
+                <input type = "text" name = "course3" placeholder = "class number">
                 <input type = "text" name = "className3" placeholder = "class name">
                 <label> Term: <label>
                 <select id = "term3" name = "term3">
@@ -248,6 +251,7 @@
                     <option>C</option>
                     <option>D</option>
                     <option>F</option>
+                    </select>
                 <input type = "text" name = "instructor3" id = "instructor3" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake3" name = "retake3">
@@ -256,9 +260,9 @@
                 </select>
                 <br>
 
-                <label> <input type = "radio" name = "classType4">Computer Science</label>
-                <label> <input type = "radio" name = "classType4">Math </label>
-                <input type = "text" name = "course#4" placeholder = "class number">
+                <label> <input type = "radio" name = "classType4" value = "Computer Science">Computer Science</label>
+                <label> <input type = "radio" name = "classType4" value = "Math">Math </label>
+                <input type = "text" name = "course4" placeholder = "class number">
                 <input type = "text" name = "className4" placeholder = "class name">
                 <label> Term: <label>
                 <select id = "term4" name = "term4">
@@ -270,6 +274,7 @@
                     <option>C</option>
                     <option>D</option>
                     <option>F</option>
+                    </select>
                 <input type = "text" name = "instructor4" id = "instructor4" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake4" name = "retake4">
@@ -352,6 +357,8 @@
         <!-- attach a copy of transcript, 
         current class schedule, and photo of ID card -->
         <br>
+<label> Attach a copy of transcript, current class schedule, and photo of ID card </label>
+
         <input type = "submit" value = "Submit Application">
     </form>
     </section>
@@ -364,8 +371,7 @@
          Winona State University is an equal opportunity employer and educator.
 
          </p>
-     
+
     </footer>
 </body>
 <html>
-
