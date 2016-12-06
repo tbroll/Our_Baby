@@ -35,7 +35,7 @@
 				<?php foreach ($stud as $row1){?>
 				<div id="<?=$row1["S_ID"]?>" class="studapp">
 					<div class="top">
-					<div class="check"><input type="checkbox" hidden></div>
+					<input type="checkbox" class="check"hidden>
 					<h2><?=$row1["fname"]?> <?=$row1["lname"]?></h2> 
 					<div class="major">
 						<strong>Major:</strong> 
@@ -58,10 +58,10 @@
 							$min1[$i]["S_ID"] = $row3["S_ID"];
 							$i+=1;
 							if ($row1["S_ID"] == $row3["S_ID"]){?>
-							<?= $row3["minor"];?>
+							<?= $row3["minor"] ." ";?>
 						<?php } 
 						  }
-						  $maj = $maj1?>
+						  $min = $min1?>
 					</div>
 					<div class="expected">
 						<strong>Expected Graduation:</strong> 

@@ -192,7 +192,7 @@ include'tcpdf_6_2_13/tcpdf/examples/buildpdf.php';
 <p><strong>Working on Campus: </strong>
 <?php foreach ($availreturn as $row){?>
 
-	<td><?php if ($row["oncampus"] == 0){
+	<?php if ($row["oncampus"] == 0){
 	print "no";
 	}else{ print "yes";
 	}?></p>
@@ -202,8 +202,8 @@ include'tcpdf_6_2_13/tcpdf/examples/buildpdf.php';
 <?php foreach ($availreturn as $row){?>
 	
 	<?php foreach ($onreturn as $row1){if ($on){if ($row1["evercamp"] == 0){
-	print "<td>no</td>";
-	}else{ print "<td>yes</td>";
+	print "no";
+	}else{ print "yes";
 	}}} ?></p>
 <?php } ?>
 
@@ -212,7 +212,7 @@ include'tcpdf_6_2_13/tcpdf/examples/buildpdf.php';
 	
 	<?php foreach ($wherereturn as $row1){if ($where){
 		$wher = $row1["whereoncamp"];
-	print "<td>$wher</td>";}} ?><p>
+	print "$wher";}} ?><p>
 <?php } ?>
 
 <p><strong>Planning a Practicum: </strong>
@@ -224,9 +224,10 @@ include'tcpdf_6_2_13/tcpdf/examples/buildpdf.php';
 	</p>
 <?php } ?>
 
-<?php if ($where){print "<p><strong>When and How Long: </strong>";} ?>
+
 <?php foreach ($availreturn as $row){?>
 	<?php foreach ($pracreturn as $row1){if ($prac){
+		print "<p><strong>When and How Long: </strong>";
 		$pract = $row1["practicum"];
 	print "<td>$pract</td>";}} ?>
 	</p>
@@ -234,7 +235,7 @@ include'tcpdf_6_2_13/tcpdf/examples/buildpdf.php';
 
 <p><strong>Can work summers: </strong>
 <?php foreach ($availreturn as $row){?>
-	<td><?php if ($row["summer"] == 0){
+	<?php if ($row["summer"] == 0){
 	print "no";
 	}else{ print "yes";
 	}?></p>
