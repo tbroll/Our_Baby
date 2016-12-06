@@ -13,7 +13,7 @@
     <div class="container">
       <section id="intro">
 
-        <form action = "confirmation.php" method = "post">
+        <form action = "confirmation.php" method = "post" enctype = "multipart/form-data">
             <!--ask Dr. C about the importance of "country of citizenship -->
             <!-- each comment will be a line on the webpage-->
             <!-- First name and last name-->
@@ -21,11 +21,15 @@
                 <legend>
                     Personal Information
                 </legend>
+            <input type = "hidden" name = "date" id = "date">
             <label> First Name: 
                 <input type = "text" name = "firstName"  id = "firstName">
             </label>
             <label> Last Name: 
                 <input type = "text" name = "lastName" id = "lastName">
+            </label>
+            <label> Student ID: 
+                <input type = "text" name = "s_id" id = "s_id" size = "20">
             </label>
             <br>
             <br>
@@ -33,7 +37,7 @@
                 <input type = "text" name = "address" id = "address">
             </label>
             <label> Phone Number: 
-                <input type = "number" min = 0 max = 19999999999 name = "phoneNumber" id = "phoneNumber">
+                <input type = "tel" name = "phoneNumber" id = "phoneNumber">
             </label>
             <!-- city, state, zip code, and date of birth-->
             <br>
@@ -169,26 +173,7 @@
                 </legend>
             <label> 
                 How many Math and Computer Science classes have you taken?
-    <!--            <select id = "numberOfClasses" name = "numberOfClasses">
-                    <option selected> 0 </option>
-                    <option> 1 </option>
-                    <option> 2 </option>
-                    <option> 3 </option>
-                    <option> 4 </option>
-                    <option> 5 </option>
-                    <option> 6 </option>
-                    <option> 7 </option>
-                    <option> 8 </option>
-                    <option> 9 </option>
-                    <option> 10</option>
-                    <option> 11</option>
-                    <option> 12</option>
-                    <option> 13</option>
-                    <option> 14</option>
-                    <option> 15</option>
-                    <option> 16</option>
-                </select>
-                -->    </label>
+                   </label>
                 <div id = "classesTaken" name = "classesTaken">
 
                     <label> <input type = "radio" name = "classType" value = "Computer Science">Computer Science</label>
@@ -209,8 +194,8 @@
                 <input type = "text" name = "instructor" id = "instructor" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake" name = "retake">
-                    <option>Yes</option>
                     <option>No</option>
+                    <option>Yes</option>
                 </select>
                 <br>
 
@@ -232,8 +217,8 @@
                 <input type = "text" name = "instructor2" id = "instructor2" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake2" name = "retake2">
-                    <option>Yes</option>
                     <option>No</option>
+                    <option>Yes</option>
                 </select>
                 <br>
 
@@ -255,8 +240,8 @@
                 <input type = "text" name = "instructor3" id = "instructor3" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake3" name = "retake3">
-                    <option>Yes</option>
                     <option>No</option>
+                    <option>Yes</option>
                 </select>
                 <br>
 
@@ -278,8 +263,8 @@
                 <input type = "text" name = "instructor4" id = "instructor4" placeholder = "instructor's name">
                 <label> Retake:</label> 
                 <select id = "retake4" name = "retake4">
-                    <option>Yes</option>
                     <option>No</option>
+                    <option>Yes</option>
                 </select>
                 <br>
             </div>
@@ -357,15 +342,16 @@
         <!-- attach a copy of transcript, 
         current class schedule, and photo of ID card -->
         <br>
-<label> Attach a copy of transcript, current class schedule, and photo of ID card </label>
-
+    <label> Attach a copy of transcript, current class schedule, and photo of ID card </label>
+        <input type = "file" name = "additional_files" id = "additional_files" accept = ".zip"> 
+        <br>
         <input type = "submit" value = "Submit Application">
     </form>
     </section>
     </div>
     </main>
     <footer>
- <p>
+         <p>
          Winona State University | P.O. Box 5838 | 175 West Mark Street | Winona, MN 55987| 507.457.5000 | 1.800.342.5978 <br>
          The oldest member of the colleges and universities of Minnesota State.
          Winona State University is an equal opportunity employer and educator.
