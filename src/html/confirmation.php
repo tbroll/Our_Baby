@@ -2,8 +2,14 @@
 if(isset($_POST["firstName"])){
     $firstname = $_POST["firstName"];
 }
+if(isset($_POST["date"])){
+    $date = $_POST["date"];
+}
 if(isset($_POST["lastName"])){
     $lastname = $_POST["lastName"];
+}
+if(isset($_POST["s_id"])){
+    $s_id = $_POST["s_id"];
 }
 if(isset($_POST["address"])){
     $address = $_POST["address"];
@@ -86,42 +92,52 @@ else{
 
 if($_POST["skill1"] != null){
     $skill1 = $_POST["skill1"];
+    $learn1 = $_POST["learn1"];
     $rating1 = $_POST["rating1"];
 }
 else{
 $skill1 = "";
+$learn1 = "";
 $rating1 = "";
 }
 if($_POST["skill2"] != null){
     $skill2 = $_POST["skill2"];
+    $learn2 = $_POST["learn2"];
     $rating2 = $_POST["rating2"];
 }
 else{
 $skill2 = "";
+$learn2 = "";
 $rating2 = "";
 }
 if($_POST["skill3"] != null){
     $skill3 = $_POST["skill3"];
+    $learn3 = $_POST["learn3"];
     $rating3 = $_POST["rating3"];
 }
 else{
 $skill3 = "";
+$learn3 = "";
 $rating3 = "";
 }
 if($_POST["skill4"] != null){
     $skill4 = $_POST["skill4"];
+    $learn4 = $_POST["learn4"];
     $rating4 = $_POST["rating4"];
 }
 else{
 $skill4 = "";
+$learn4 = "";
 $rating4 = "";
 }
 if($_POST["skill5"] != null){
     $skill5 = $_POST["skill5"];
+    $learn5 = $_POST["learn5"];
     $rating5 = $_POST["rating5"];
 }
 else{
 $skill5 = "";
+$learn5 = "";
 $rating5 = "";
 }
 
@@ -239,6 +255,9 @@ else{
     $instructor4 = "";
     $retake4 = "";
 }
+if(isset($_POST["currentEmployee"])){
+    $currentEmployee = $_POST["currentEmployee"];
+}
 ?>
 <!doctype html>
 <html lang = "en">
@@ -266,6 +285,14 @@ Confirmation Page
 <tr>
 <td>Last Name</td>
 <td><?=$lastname?></td>
+</tr>
+<tr>
+<td>Student ID</td>
+<td><?=$s_id?></td>
+</tr>
+<tr>
+<td>Date Applied </td>
+<td><?=$date?></td>
 </tr>
 <tr>
 <td>Address</td>
@@ -401,30 +428,114 @@ Confirmation Page
 <table>
 <tr>
 <th>Skills</th>
+<th> Where did learn this skill? </th>
 <th>ratings</th>
 </tr>
 <tr>
 <td> <?=$skill1?> </td>
+<td> <?=$learn1?> </td>
 <td><?=$rating1?></td>
 </tr>
 <tr>
 <td> <?=$skill2?> </td>
+<td> <?=$learn2?> </td>
 <td><?=$rating2?></td>
 </tr>
 <tr>
 <td> <?=$skill3?> </td>
+<td> <?=$learn3?> </td>
 <td><?=$rating3?></td>
 </tr>
 <tr>
 <td> <?=$skill4?></td>
+<td> <?=$learn4?></td>
 <td> <?=$rating4?></td>
 </tr>
 <tr>
 <td> <?=$skill5?> </td>
+<td> <?=$learn5?> </td>
 <td><?=$rating5?></td>
 </tr>
 </table>
-<!--<button id = "submit">Submit</button>-->
+<form action = "confirmed.php" method = "post" enctype = "multipart/form-data"> 
+<input type = "hidden" name = "date" value = <?=$date?>>
+<input type = "hidden" name = "firstname" value = <?=$firstname?>>
+<input type = "hidden" name = "lastname" value = <?=$lastname?>>
+<input type = "hidden" name = "s_id" value = <?=$s_id?>>
+<input type = "hidden" name = "address" value = <?=$address?>>
+<input type = "hidden" name = "phoneNumber" value = <?=$phoneNumber?>>
+<input type = "hidden" name = "city" value = <?=$city?>>
+<input type = "hidden" name = "state" value = <?=$state?>>
+<input type = "hidden" name = "zip" value = <?=$zip?>>
+<input type = "hidden" name = "DOB_month" value = <?=$DOB_month?>>
+<input type = "hidden" name = "DOB_day" value = <?=$DOB_day?>>
+<input type = "hidden" name = "DOB_year" value = <?=$DOB_year?>>
+<input type = "hidden" name = "majors" value = <?=$majors?>>
+<input type = "hidden" name = "minors" value = <?=$minors?>>
+<input type = "hidden" name = "graduationDate" value = <?=$graduationDate?>>
+<input type = "hidden" name = "workSummers" value = <?=$workSummers?>>
+<input type = "hidden" name = "workcc" value = <?=$workcc?>>
+<input type = "hidden" name = "workOnCampusPast" value = <?=$workOnCampusPast?>>
+<input type = "hidden" name = "ww" value = <?=$ww?>>
+<input type = "hidden" name = "practicum" value = <?=$practicum?>>
+<input type = "hidden" name = "pracHowLong" value = <?=$pracHowLong?>>
+<input type = "hidden" name = "activity1" value = <?=$activity1?>>
+<input type = "hidden" name = "ts1" value = <?=$ts1?>>
+<input type = "hidden" name = "activity2" value = <?=$activity2?>>
+<input type = "hidden" name = "ts2" value = <?=$ts2?>>
+<input type = "hidden" name = "activity3" value = <?=$activity3?>>
+<input type = "hidden" name = "ts3" value = <?=$ts3?>>
+<input type = "hidden" name = "activity4" value = <?=$activity4?>>
+<input type = "hidden" name = "ts4" value = <?=$ts4?>>
+<input type = "hidden" name = "activity5" value = <?=$activity5?>>
+<input type = "hidden" name = "ts5" value = <?=$ts5?>>
+<input type = "hidden" name = "classType" value = <?=$classType?>>
+<input type = "hidden" name = "course" value = <?=$course?>>
+<input type = "hidden" name = "className" value = <?=$className?>>
+<input type = "hidden" name = "term" value = <?=$term?>>
+<input type = "hidden" name = "grade" value = <?=$grade?>>
+<input type = "hidden" name = "instructor" value = <?=$instructor?>>
+<input type = "hidden" name = "retake" value = <?=$retake?>>
+<input type = "hidden" name = "classType2" value = <?=$classType2?>>
+<input type = "hidden" name = "course2" value = <?=$course2?>>
+<input type = "hidden" name = "className2" value = <?=$className2?>>
+<input type = "hidden" name = "term2" value = <?=$term2?>>
+<input type = "hidden" name = "grade2" value = <?=$grade2?>>
+<input type = "hidden" name = "instructor2" value = <?=$instructor2?>>
+<input type = "hidden" name = "retake2" value = <?=$retake2?>>
+<input type = "hidden" name = "classType3" value = <?=$classType3?>>
+<input type = "hidden" name = "course3" value = <?=$course3?>>
+<input type = "hidden" name = "className3" value = <?=$className3?>>
+<input type = "hidden" name = "term3" value = <?=$term3?>>
+<input type = "hidden" name = "grade3" value = <?=$grade3?>>
+<input type = "hidden" name = "instructor3" value = <?=$instructor3?>>
+<input type = "hidden" name = "retake3" value = <?=$retake3?>>
+<input type = "hidden" name = "classType4" value = <?=$classType4?>>
+<input type = "hidden" name = "course4" value = <?=$course4?>>
+<input type = "hidden" name = "className4" value = <?=$className4?>>
+<input type = "hidden" name = "term4" value = <?=$term4?>>
+<input type = "hidden" name = "grade4" value = <?=$grade4?>>
+<input type = "hidden" name = "instructor4" value = <?=$instructor4?>>
+<input type = "hidden" name = "retake4" value = <?=$retake4?>>
+<input type = "hidden" name = "skill1" value = <?=$skill1?>>
+<input type = "hidden" name = "learn1" value = <?=$learn1?>>
+<input type = "hidden" name = "rating1" value = <?=$rating1?>>
+<input type = "hidden" name = "skill2" value = <?=$skill2?>>
+<input type = "hidden" name = "learn2" value = <?=$learn2?>>
+<input type = "hidden" name = "rating2" value = <?=$rating2?>>
+<input type = "hidden" name = "skill3" value = <?=$skill3?>>
+<input type = "hidden" name = "learn3" value = <?=$learn3?>>
+<input type = "hidden" name = "rating3" value = <?=$rating3?>>
+<input type = "hidden" name = "skill4" value = <?=$skill4?>>
+<input type = "hidden" name = "learn4" value = <?=$learn4?>>
+<input type = "hidden" name = "rating4" value = <?=$rating4?>>
+<input type = "hidden" name = "skill5" value = <?=$skill5?>>
+<input type = "hidden" name = "learn5" value = <?=$learn5?>>
+<input type = "hidden" name = "rating5" value = <?=$rating5?>>
+<input type = "hidden" name = "currentEmployee" value = <?=$currentEmployee?>>
+<!-- need to submit files to database -->
+<input type = "submit" value = "submit">
+</form>
 </main>
 </body>
 </html>
