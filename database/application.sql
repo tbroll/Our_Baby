@@ -26,6 +26,7 @@ CREATE TABLE `Student` (
   `fname` varchar(120) NOT NULL DEFAULT '0',
   `lname` varchar(120) NOT NULL DEFAULT '0',
   `S_ID` varchar(10)  NOT NULL,
+  `date_applied` varchar(15) NOT NULL,
   `address` varchar(120) DEFAULT NULL,
   `phone` varchar(10) DEFAULT NULL,
   `city` varchar(30) DEFAULT '0',
@@ -95,13 +96,14 @@ DROP TABLE IF EXISTS `Courses`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Courses` (
   `S_ID` varchar(10) NOT NULL,
+  `dept` varchar(5) NOT NULL,
   `course_num` varchar(10) NOT NULL DEFAULT '0',
   `name` varchar(70) NOT NULL DEFAULT '0',
   `term` varchar(10) NOT NULL DEFAULT '0',
   `grade` varchar(3) NOT NULL DEFAULT '0',
   `instructor` varchar(90) NOT NULL DEFAULT '0',
   `rep` boolean NOT NULL DEFAULT '0',
-  PRIMARY KEY (`S_ID`)
+  PRIMARY KEY (`S_ID`, `dept`, `course_num`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
