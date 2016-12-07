@@ -247,21 +247,18 @@ if(isset($_POST["currentEmployee"])){
 }
 ?>
 <!doctype html>
-<html lang = "en">
-<head>
-<meta charset = "UTF-8">
-<title>
-Confirmation Page
-</title>
-<script type = "text/javascript" src = "../resources/js/submitQueries.js">
-</script>
-</head>
-<body>
-<header>
-<h1>Thank you <?=$firstname?> <?=$lastname?> for applying to the testing lab</h1>
-</header>
-<main>
-<table>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+   <?php include 'head.html';?>
+  <body>
+    <header class="subpage">
+      <div>
+      <h1>Does this information you submitted accurate?</h1>
+      </div>
+    </header>
+    <main class="main-subpage">
+    <div class="container">
+      <section id="intro">
+<table class = "table table-striped table-responsive">
 <tr>
 <th>Submitted Information</th>
 </tr>
@@ -333,7 +330,7 @@ Confirmation Page
 </tr>
 </table>
 <hr>
-<table>
+<table class = "table table-striped table-responsive">
 <tr>
 <th>Activity</th>
 <th>Time in minutes spent on activity</th>
@@ -360,7 +357,7 @@ Confirmation Page
 </tr>
 </table>
 <hr>
-<table>
+<table class = "table table-striped table-responsive">
 <tr>
 <th>Department</th>
 <th>Class ID</th>
@@ -408,7 +405,7 @@ Confirmation Page
 </tr>
 </table>
 <hr>
-<table>
+<table class = "table table-striped table-responsive">
 <tr>
 <th>Skills</th>
 <th>ratings</th>
@@ -551,6 +548,8 @@ $skill5 = str_replace(" ", "_", $skill5);
 <!-- need to submit files to database -->
 <input type = "submit" value = "submit">
 </form>
+</section>
+</div>
 </main>
 </body>
 </html>
