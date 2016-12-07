@@ -299,7 +299,7 @@ Confirmation Page
 </tr>
 <tr>
 <td>Date of Birth</td>
-<td><?=$DOB_month?> <?=$DOB_day?> <?=$DOB_year?></td>
+<td><?=$DOB_month?>-<?=$DOB_day?>-<?=$DOB_year?></td>
 </tr>
 <tr>
 <td>major</td>
@@ -434,22 +434,71 @@ Confirmation Page
 <td><?=$rating5?></td>
 </tr>
 </table>
+<?php 
+$address = str_replace(" ", "_", $address);
+$DOB = "$DOB_month/$DOB_day/$DOB_year";
+$citizenship = str_replace(" ", "_", $citizenship);
+$majors = str_replace(" ", "_", $majors);
+$minors = str_replace(" ", "_", $minors);
+$graduationDate = str_replace(" ", "_", $graduationDate);
+$ww = str_replace(" ", "_", $ww);
+$pracHowLong = str_replace(" ", "_", $pracHowLong);
+
+$activity1 = str_replace(" ", "_", $activity1);
+$activity2 = str_replace(" ", "_", $activity2);
+$activity3 = str_replace(" ", "_", $activity3);
+$activity4 = str_replace(" ", "_", $activity4);
+$activity5 = str_replace(" ", "_", $activity5);
+
+$course = "$classType"."_"."$course";
+$course2= "$classType2"."_"."$course2";
+$course3 = "$classType3"."_"."$course3";
+$course4 = "$classType4"."_"."$course4";
+
+$course = str_replace(" ", "_", $course);
+$course2 = str_replace(" ", "_", $course2);
+$course3 = str_replace(" ", "_", $course3);
+$course4 = str_replace(" ", "_", $course4);
+
+$className = str_replace(" ", "_", $className);
+$className2 = str_replace(" ", "_", $className2);
+$className3 = str_replace(" ", "_", $className3);
+$className4 = str_replace(" ", "_", $className4);
+
+$instructor = str_replace(" ", "_", $instructor);
+$instructor2 = str_replace(" ", "_", $instructor2);
+$instructor3 = str_replace(" ", "_", $instructor3);
+$instructor4 = str_replace(" ", "_", $instructor4);
+
+$term = str_replace(" ", "_", $term);
+$term2 = str_replace(" ", "_", $term2);
+$term3 = str_replace(" ", "_", $term3);
+$term4 = str_replace(" ", "_", $term4);
+
+$skill1 = str_replace(" ", "_", $skill1);
+$skill2 = str_replace(" ", "_", $skill2);
+$skill3 = str_replace(" ", "_", $skill3);
+$skill4 = str_replace(" ", "_", $skill4);
+$skill5 = str_replace(" ", "_", $skill5);
+
+?>
 <form action = "confirmed.php" method = "post" enctype = "multipart/form-data"> 
 <input type = "hidden" name = "firstname" value = <?=$firstname?>>
 <input type = "hidden" name = "lastname" value = <?=$lastname?>>
 <input type = "hidden" name = "s_id" value = <?=$s_id?>>
 <input type = "hidden" name = "address" value = <?=$address?>>
+<input type = "hidden" name = "email" value = <?=$email?>>
+<input type = "hidden" name = "citizenship" value = <?=$citizenship?>>
 <input type = "hidden" name = "phoneNumber" value = <?=$phoneNumber?>>
 <input type = "hidden" name = "city" value = <?=$city?>>
 <input type = "hidden" name = "state" value = <?=$state?>>
 <input type = "hidden" name = "zip" value = <?=$zip?>>
-<input type = "hidden" name = "DOB_month" value = <?=$DOB_month?>>
-<input type = "hidden" name = "DOB_day" value = <?=$DOB_day?>>
-<input type = "hidden" name = "DOB_year" value = <?=$DOB_year?>>
+<input type = "hidden" name = "DOB" value = <?=$DOB?>>
 <input type = "hidden" name = "majors" value = <?=$majors?>>
 <input type = "hidden" name = "minors" value = <?=$minors?>>
 <input type = "hidden" name = "graduationDate" value = <?=$graduationDate?>>
 <input type = "hidden" name = "workSummers" value = <?=$workSummers?>>
+<input type = "hidden" name = "workDuringYear" value = <?=$workDuringYear?>>
 <input type = "hidden" name = "workcc" value = <?=$workcc?>>
 <input type = "hidden" name = "workOnCampusPast" value = <?=$workOnCampusPast?>>
 <input type = "hidden" name = "ww" value = <?=$ww?>>
@@ -465,28 +514,24 @@ Confirmation Page
 <input type = "hidden" name = "ts4" value = <?=$ts4?>>
 <input type = "hidden" name = "activity5" value = <?=$activity5?>>
 <input type = "hidden" name = "ts5" value = <?=$ts5?>>
-<input type = "hidden" name = "classType" value = <?=$classType?>>
 <input type = "hidden" name = "course" value = <?=$course?>>
 <input type = "hidden" name = "className" value = <?=$className?>>
 <input type = "hidden" name = "term" value = <?=$term?>>
 <input type = "hidden" name = "grade" value = <?=$grade?>>
 <input type = "hidden" name = "instructor" value = <?=$instructor?>>
 <input type = "hidden" name = "retake" value = <?=$retake?>>
-<input type = "hidden" name = "classType2" value = <?=$classType2?>>
 <input type = "hidden" name = "course2" value = <?=$course2?>>
 <input type = "hidden" name = "className2" value = <?=$className2?>>
 <input type = "hidden" name = "term2" value = <?=$term2?>>
 <input type = "hidden" name = "grade2" value = <?=$grade2?>>
 <input type = "hidden" name = "instructor2" value = <?=$instructor2?>>
 <input type = "hidden" name = "retake2" value = <?=$retake2?>>
-<input type = "hidden" name = "classType3" value = <?=$classType3?>>
 <input type = "hidden" name = "course3" value = <?=$course3?>>
 <input type = "hidden" name = "className3" value = <?=$className3?>>
 <input type = "hidden" name = "term3" value = <?=$term3?>>
 <input type = "hidden" name = "grade3" value = <?=$grade3?>>
 <input type = "hidden" name = "instructor3" value = <?=$instructor3?>>
 <input type = "hidden" name = "retake3" value = <?=$retake3?>>
-<input type = "hidden" name = "classType4" value = <?=$classType4?>>
 <input type = "hidden" name = "course4" value = <?=$course4?>>
 <input type = "hidden" name = "className4" value = <?=$className4?>>
 <input type = "hidden" name = "term4" value = <?=$term4?>>
