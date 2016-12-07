@@ -176,7 +176,7 @@
                    </label>
                 <div id = "classesTaken" name = "classesTaken">
 
-                    <label> <input type = "radio" name = "classType" value = "Computer Science">Computer Science</label>
+                    <label> <input type = "radio" name = "classType" value = "Computer_Science">Computer Science</label>
                 <label> <input type = "radio" name = "classType" value = "Math">Math </label>
                 <input type = "text" name = "course" placeholder = "class number">
                 <input type = "text" name = "className" placeholder = "class name">
@@ -274,12 +274,9 @@
             <h4>
                 List other CS or special skills that you may have?
                 <br>
-                Where did you did you get these skills?
-                <br>
                 Rate your skills on a scale from 1 to 5.
             </h4>
             <input type = "text" id = "skill1" name = "skill1" placeholder = "additional skills">
-            <input type = "text" id = "learn1" name = "learn1" size = "40" placeholder = "Where did you learn this skill?">
             <select id = "rating1" name = "rating1">
                 <option>1</option>
                 <option>2</option>
@@ -289,7 +286,6 @@
             </select>
             <br>
             <input type = "text" id = "skill2" name = "skill2" placeholder = "additional skills">
-            <input type = "text" id = "learn2" name = "learn2" size = "40" placeholder = "Where did you learn this skill?">
             <select id = "rating2" name = "rating2">
                 <option>1</option>
                 <option>2</option>
@@ -299,7 +295,6 @@
             </select>
             <br>
             <input type = "text" id = "skill3" name = "skill3" placeholder = "additional skills">
-            <input type = "text" id = "learn3" name = "learn3" size = "40" placeholder = "Where did you learn this skill?">
             <select id = "rating3" name = "rating3">
                 <option>1</option>
                 <option>2</option>
@@ -309,7 +304,6 @@
             </select>
             <br>
             <input type = "text" id = "skill4" name = "skill4" placeholder = "additional skills">
-            <input type = "text" id = "learn4" name = "learn4" size = "40" placeholder = "Where did you learn this skill?">
             <select id = "rating4" name = "rating4">
                 <option>1</option>
                 <option>2</option>
@@ -319,7 +313,6 @@
             </select>
             <br>
             <input type = "text" id = "skill5" name = "skill5" placeholder = "additional skills">
-            <input type = "text" id = "learn5" name = "learn5" size = "40" placeholder = "Where did you learn this skill?">
             <select id = "rating5" name = "rating5">
                 <option>1</option>
                 <option>2</option>
@@ -329,15 +322,6 @@
             </select>
             <br>
             </div>
-        <!-- Do you know anyone who currently works in the lab? if so, who? -->
-        <br>
-        <br>
-        <label> 
-            Do you know of anyone who currently works in the testing lab?
-            If so, who?
-            <input type = "text" id = "currentEmployee" name = "currentEmployee" placeholder = "enter name here">
-        </label>
-        <br>
         <br>
         <!-- attach a copy of transcript, 
         current class schedule, and photo of ID card -->
