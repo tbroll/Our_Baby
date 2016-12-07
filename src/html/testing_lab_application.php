@@ -325,8 +325,14 @@
         <!-- attach a copy of transcript, 
         current class schedule, and photo of ID card -->
         <br>
-    <label> Attach a copy of transcript, current class schedule, and photo of ID card </label>
-        <input type = "file" name = "additional_files" id = "additional_files" accept = ".zip"> 
+    <label> Attach a copy of transcript</label>
+        <input type = "file" name = "transcript" id = "transcript" accept = ".pdf"> 
+        <br>
+    <label>Attach your current class schedule</label>
+        <input type = "file" name = "class_schedule" id = "class_schedule" accept = ".png"> 
+        <br>
+    <label>Attach a photo of ID card </label>
+        <input type = "file" name = "photo_id" id = "photo_id" accept = ".png"> 
         <br>
         <input type = "submit" value = "Submit Application">
     </form>
