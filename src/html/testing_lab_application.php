@@ -21,7 +21,6 @@
                 <legend>
                     Personal Information
                 </legend>
-            <input type = "hidden" name = "date" id = "date">
             <label> First Name: 
                 <input type = "text" name = "firstName"  id = "firstName">
             </label>
@@ -54,18 +53,18 @@
             <label> Date Of Birth:
                 <select  id = "month" name = "month">
                     <option value = "">N/A</option>
-                    <option value = "January">January</option>
-                    <option value = "Febuary">Febuary</option>
-                    <option value = "March">March</option>
-                    <option value = "April">April</option>
-                    <option value = "May">May</option>
-                    <option value = "June">June</option>
-                    <option value = "July">July</option>
-                    <option value = "August">August</option>
-                    <option value = "September">September</option>
-                    <option value = "October">October</option>
-                    <option value = "November">November</option>
-                    <option value = "December">December</option>
+                    <option value = "1">January</option>
+                    <option value = "2">Febuary</option>
+                    <option value = "3">March</option>
+                    <option value = "4">April</option>
+                    <option value = "5">May</option>
+                    <option value = "6">June</option>
+                    <option value = "7">July</option>
+                    <option value = "8">August</option>
+                    <option value = "9">September</option>
+                    <option value = "10">October</option>
+                    <option value = "11">November</option>
+                    <option value = "12">December</option>
                 </select>
                 <input type = "number" name = "day" id = "day" min = 0 max = 31 placeholder = "day">
                 <input type = "number" name = "year" id = "year" placeholder = "year" min = 1985>
@@ -176,7 +175,7 @@
                    </label>
                 <div id = "classesTaken" name = "classesTaken">
 
-                    <label> <input type = "radio" name = "classType" value = "Computer_Science">Computer Science</label>
+                    <label> <input type = "radio" name = "classType" value = "CS">Computer Science</label>
                 <label> <input type = "radio" name = "classType" value = "Math">Math </label>
                 <input type = "text" name = "course" placeholder = "class number">
                 <input type = "text" name = "className" placeholder = "class name">
@@ -199,7 +198,7 @@
                 </select>
                 <br>
 
-                <label> <input type = "radio" name = "classType2" value = "Computer Science">Computer Science</label>
+                <label> <input type = "radio" name = "classType2" value = "CS">Computer Science</label>
                 <label> <input type = "radio" name = "classType2" value = "Math">Math </label>
                 <input type = "text" name = "course2" placeholder = "class number">
                 <input type = "text" name = "className2" placeholder = "class name">
@@ -222,7 +221,7 @@
                 </select>
                 <br>
 
-                <label> <input type = "radio" name = "classType3" value = "Computer Science">Computer Science</label>
+                <label> <input type = "radio" name = "classType3" value = "CS">Computer Science</label>
                 <label> <input type = "radio" name = "classType3" value = "Math">Math </label>
                 <input type = "text" name = "course3" placeholder = "class number">
                 <input type = "text" name = "className3" placeholder = "class name">
@@ -245,7 +244,7 @@
                 </select>
                 <br>
 
-                <label> <input type = "radio" name = "classType4" value = "Computer Science">Computer Science</label>
+                <label> <input type = "radio" name = "classType4" value = "CS">Computer Science</label>
                 <label> <input type = "radio" name = "classType4" value = "Math">Math </label>
                 <input type = "text" name = "course4" placeholder = "class number">
                 <input type = "text" name = "className4" placeholder = "class name">
