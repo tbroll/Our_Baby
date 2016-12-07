@@ -2,7 +2,7 @@ window.onload = init;
 function init(){
 
     //generate options date of graduation
-    
+    var year = new Date().getFullYear(); 
     year = parseInt(year, 10);
     var gradYears = year + 6;
     var earliestTerm = year - 6;
