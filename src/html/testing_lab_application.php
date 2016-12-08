@@ -325,13 +325,13 @@
         <!-- attach a copy of transcript, 
         current class schedule, and photo of ID card -->
         <br>
-    <label> Attach a copy of transcript</label>
-        <input type = "file" name = "transcript" id = "transcript" accept = ".pdf"> 
+    <label> Attach a copy of transcript in .txt format</label>
+        <input type = "file" name = "transcript" id = "transcript" accept = ".txt"> 
         <br>
-    <label>Attach your current class schedule</label>
+    <label>Attach your current class schedule in .png format</label>
         <input type = "file" name = "class_schedule" id = "class_schedule" accept = ".png"> 
         <br>
-    <label>Attach a photo of ID card </label>
+    <label>Attach a photo of ID card in .png format</label>
         <input type = "file" name = "photo_id" id = "photo_id" accept = ".png"> 
         <br>
         <input type = "submit" value = "Submit Application">
