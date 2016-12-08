@@ -245,6 +245,30 @@ else{
 if(isset($_POST["currentEmployee"])){
     $currentEmployee = $_POST["currentEmployee"];
 }
+$pathname = "../../applicants/$s_id";
+    if(!file_exists($pathname)){
+       mkdir($pathname,0777,true);
+    } 
+if (is_uploaded_file($_FILES["transcript"]["tmp_name"])) {
+      move_uploaded_file($_FILES["transcript"]["tmp_name"], "$pathname/transcript.txt");
+    //    print "Saved uploaded file as $s_id/transcript.pdf\n";
+} else {
+      print "Error: required file not uploaded";
+}
+
+if (is_uploaded_file($_FILES["class_schedule"]["tmp_name"])) {
+      move_uploaded_file($_FILES["class_schedule"]["tmp_name"], "$pathname/class_schedule.png");
+     //   print "Saved uploaded file as $s_id/class_schedule.png\n";
+} else {
+      print "Error: required file not uploaded";
+}
+
+if (is_uploaded_file($_FILES["photo_id"]["tmp_name"])) {
+      move_uploaded_file($_FILES["photo_id"]["tmp_name"], "$pathname/photo_id.png");
+      //  print "Saved uploaded file as $s_id/photo_id.png\n";
+} else {
+      print "Error: required file not uploaded";
+}
 ?>
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
