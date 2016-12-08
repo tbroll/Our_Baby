@@ -1,16 +1,15 @@
  <?php
- function login($user, $pass) {
+	$user = $_POST["user"];
+	$pass = $_POST["pass"];
 	$query = "SELECT * FROM user ";
 	$db = new PDO("mysql:dbname=adminlogin;host=localhost", "root");
     $results = $db->query($query);
 	
-	$bae = "false";
-	foreach($results as $key -> $val){
-		$bae = "false";
+	foreach($results as $key){
 		if($key["username"] == $user && $key["password"] == $pass){
-			$bae = $key["username"];
+			print("true");
+		}else{
+			print(null);
 		}
 	}
-	echo $bae;
-}
 ?>

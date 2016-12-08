@@ -101,7 +101,7 @@ CREATE TABLE `Courses` (
   `grade` varchar(3) NOT NULL DEFAULT '0',
   `instructor` varchar(90) NOT NULL DEFAULT '0',
   `rep` boolean NOT NULL DEFAULT '0',
-  PRIMARY KEY (`S_ID`,`course_num`)
+  PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

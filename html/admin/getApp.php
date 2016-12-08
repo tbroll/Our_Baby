@@ -148,7 +148,7 @@ if (isSet($gen1)){
 }
 
 //create pdf
-include'tcpdf_6_2_13/tcpdf/examples/buildpdf.php';
+include'../../tcpdf_6_2_13/tcpdf/examples/buildpdf.php';
 
 ?>
 

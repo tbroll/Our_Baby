@@ -8,17 +8,15 @@ function init(){
 	var user=$("#username").prop("value");
 	var pass=$("#password").prop("value");
 	
-	alert(" " + user + " " + pass);
-	
-	$.ajax({
-    type: "POST",
-    url: 'dblogin.php',
-    dataType: 'text',
-    data: {functionname: 'login', arguments: [user, pass]},
-    success: function (bool) {
-					window.location.replace("admin.php");
-            }
+	$.post("dblogin.php", {"user" : user, "pass" : pass})
+		.done(function( data ) {
+			if (data == " "){
+				alert("incorrect credentials");
+				window.location.replace("adminlogin.php");
+			}else{
+				window.location.replace("admin.php");
+			}
 	});
-	
+
 });
 }

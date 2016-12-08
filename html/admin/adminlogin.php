@@ -21,7 +21,7 @@
 			<div id="login">
 				<form>
 					Username: <input type="text" id="username"><br>
-					Password: <input type="text" id="password"><br>
+					Password: <input type="password" id="password"><br>
 					<input type="submit" value="Log in" id="submit_butt">
 				</form>
 			</div>

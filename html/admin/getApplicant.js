@@ -52,15 +52,14 @@ function init(){
 	$("#delete").click(function(){
 		var check = $(".check");
 		var url = "delete.php";
+		var insert = $("#deletenotify");
 		check.each(function(index){
 			if($(this).prop("checked")){
 				var par = $(this).parent().parent();
 				var id = par.prop("id");
-				$.post(dburl, {"id" : id})
+				$.post(url, {"id" : id})
 				.done(function( data ) {
-				insert.html(data);
-				ep.prop("hidden", false);
-				ep.prop("class", "easyprint print btn");
+				insert.append(data);
 			});
 			}
 		});

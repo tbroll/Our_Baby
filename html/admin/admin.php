@@ -71,7 +71,7 @@
 					<div class="moreinfo close">
 						<div class="insert"></div>
 						<div class="buttons">
-							<form method="POST" action="applicants/<?=$row1["S_ID"]?>/app.pdf">
+							<form method="POST" action="../../applicants/<?=$row1["S_ID"]?>/app.pdf">
 							<input type="submit" class="easyprint" value="Easy Print" hidden></button>
 							</form>
 							<p></p>
@@ -82,6 +82,7 @@
 				<?php } ?>
 			</div>
 			<div>
+				<div id="deletenotify"></div>
 				<button id="delete" hidden>Delete</button>
 			</div>
 		</main>
