@@ -245,7 +245,7 @@ else{
 if(isset($_POST["currentEmployee"])){
     $currentEmployee = $_POST["currentEmployee"];
 }
-$pathname = "../../applicants/$s_id";
+$pathname = "../applicants/$s_id";
     if(!file_exists($pathname)){
        mkdir($pathname,0777,true);
     } 
