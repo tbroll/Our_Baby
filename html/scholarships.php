@@ -51,15 +51,6 @@
       </p>
        </div>
     </main>
-
-       <footer>
- <p>
-         Winona State University | P.O. Box 5838 | 175 West Mark Street | Winona, MN 55987| 507.457.5000 | 1.800.342.5978 <br>
-         The oldest member of the colleges and universities of Minnesota State.
-         Winona State University is an equal opportunity employer and educator.
-
-         </p>
-     
-    </footer>
+   <?php include 'footer.html';?>
 </html>
 

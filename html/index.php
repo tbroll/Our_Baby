@@ -9,7 +9,7 @@
 
     <header>
       <div class="logo wow bounceInUp">
-        <img src="images/Winona_State_University_flame.png" alt="Winona State logo">
+        <img src="../images/Winona_State_University_flame.png" alt="Winona State logo">
         <h1>Computer Science Department</h1>
         <h3>at Winona State University</h3>
       </div>
@@ -21,16 +21,16 @@
           <div class="col-xs-12 col-md-4 wow bounceInUp">
             <a href="software-testing-lab.php">
               <h4 class="box-title">Real Work Experience Through The Software Testing Lab</h4>
-              <img src="images/softwarelab.jpg" alt="..." class="img-rounded img-responsive box">
+              <img src="../images/softwarelab.jpg" alt="..." class="img-rounded img-responsive box">
             </a>
             <p class="box-paragraph">
               "The WSU Software Testing and Development Lab provides testing, development, and other computer and networking related technical services to local and regional businesses and industry."﻿
               </p>
           </div>
           <div class="col-xs-12 col-md-4 wow bounceInUp">
-            <a href="http://wsucs.club/home">
+            <a href="http://wsucs.club">
               <h4 class="box-title">Tours To Different Companies For Students</h4>
-              <img src="images/microsoft.jpg" alt="..." class="img-rounded img-responsive box">
+              <img src="../images/microsoft.jpg" alt="..." class="img-rounded img-responsive box">
             </a>
             <p class="box-paragraph">
               "Computer Science Department at WSU provides students with unique opportunity to visit different companies like Microsoft, Nerdery, Watlow, etc. and learn more about the field."﻿
@@ -39,7 +39,7 @@
           <div class="col-xs-12 col-md-4 wow bounceInUp">
             <a href="practicum.php">
               <h4 class="box-title">Undergrad Research Seminar Opportunities</h4>
-              <img src="images/research.jpg" alt="..." class="img-rounded img-responsive box">
+              <img src="../images/research.jpg" alt="..." class="img-rounded img-responsive box">
             </a>
             <p class="box-paragraph">
               "Through service-learning, independent research projects, and internships, students also have the opportunity to work one-on-one with faculty in specialized areas of their interest."﻿
